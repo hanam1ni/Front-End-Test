@@ -12,7 +12,7 @@ export default () => {
 
     stories
         .add('Button', () => (
-            <Button bsStyle="primary">{text('Label', 'Hello Button')}</Button>
+            <Button>{text('Label', 'Hello Button')}</Button>
         ))
 }
  

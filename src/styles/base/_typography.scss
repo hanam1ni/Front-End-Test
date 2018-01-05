@@ -1,0 +1,42 @@
+@function font-weight($keyword) {
+	$conversion-map: (
+	  hairline: 100,
+	  ultralight: 200,
+	  light: 300,
+	  regular: 400,
+	  semibold: 600,
+	  bold: 700,
+	  extrabold: 800,
+	  black: 900,
+	);
+
+	@if not map-has-key($conversion-map, $keyword) {
+        @return null;
+	}
+    
+    @return map-get($conversion-map, $keyword);
+}
+
+@mixin font-weight($weight) {
+    font-weight: font-weight($weight);
+}
+
+@mixin font-face($family, $url, $type, $weight) {
+    @font-face {
+        font-family: $family;
+        src: url($url) format($type);
+        @include font-weight($weight);
+    }
+}
+
+@include font-face('montserrat', '../statics/fonts/Montserrat-Black.otf', 'opentype', 'black');
+@include font-face('montserrat', '../statics/fonts/Montserrat-Bold.ttf', 'truetype', 'bold');
+@include font-face('montserrat', '../statics/fonts/Montserrat-ExtraBold.otf', 'opentype', 'extrabold');
+@include font-face('montserrat', '../statics/fonts/Montserrat-Hairline.otf', 'opentype', 'hairline');
+@include font-face('montserrat', '../statics/fonts/Montserrat-Light.otf', 'opentype', 'light');
+@include font-face('montserrat', '../statics/fonts/Montserrat-Regular.ttf', 'truetype', 'regular');
+@include font-face('montserrat', '../statics/fonts/Montserrat-SemiBold.otf', 'opentype', 'semibold');
+@include font-face('montserrat', '../statics/fonts/Montserrat-UltraLight.otf', 'opentype', 'ultralight');
+
+$fontFamily: 'montserrat', sans-serif;
+$fontSize-Regular : 14px;
