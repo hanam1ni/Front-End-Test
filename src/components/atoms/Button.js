@@ -3,7 +3,8 @@ import { Button as DefaultButton } from 'react-bootstrap'
 
 export default class Button extends Component {
     render() {
-        const {children} = this.props
-        return <DefaultButton {...this.props} className="button-default" >{children}</DefaultButton>
+        const {secondary, children} = this.props
+        const buttonClass = secondary ? "button-secondary" : "button-default"
+        return <DefaultButton className={buttonClass} {...this.props}>{children}</DefaultButton>
     }
 }
