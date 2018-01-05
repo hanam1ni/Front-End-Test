@@ -16,6 +16,7 @@
     "webpack-dev-server": "^2.9.7"
   },
   "devDependencies": {
+    "@storybook/addon-knobs": "^3.3.3",
     "@storybook/react": "^3.3.3",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
