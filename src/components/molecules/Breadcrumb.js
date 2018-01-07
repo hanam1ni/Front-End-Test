@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'; 
 
 export default class Breadcrumb extends Component {
     render() {
-        const levels = ['Order', 'TN SO 000015']
+        const { levels } = this.props
         return <div className="breadcrumb-container">
             {levels.map((levelName) => (
                 <span>
@@ -11,4 +12,12 @@ export default class Breadcrumb extends Component {
             ))}
         </div>
     }
+}
+
+Breadcrumb.propTypes = {
+    levels: PropTypes.array
+}
+
+Breadcrumb.defaultProps = {
+    levels: []
 }
