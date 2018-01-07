@@ -12,10 +12,10 @@ export default class Button extends Component {
 
 Button.propTypes = {
     children: PropTypes.node,
-   
+    secondary: PropTypes.bool
 }
 
 Button.defaultProps = {
     children: null,
-    
+    secondary: false
 }
