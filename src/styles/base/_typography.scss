@@ -40,3 +40,7 @@
 
 $fontFamily: 'montserrat', sans-serif;
 $fontSize-Regular : 14px;
+
+body {
+	font-family: $fontFamily;
+}
