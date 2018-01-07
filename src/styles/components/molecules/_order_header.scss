@@ -13,3 +13,17 @@
         margin-bottom: 5px;
     }
 }
+
+.order-header-select {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    div {
+        justify-self: center;
+    }
+    span {
+        font-size: $fontSize-ExtraSmall;
+        color: $colorGrey-Dark;
+    }
+}
