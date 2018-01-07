@@ -19,8 +19,8 @@ export default () => {
         })
         .add('Dropdown Button', () => {
             return <DropdownButton
-                bsStyle="default"
                 title="Default"
+                className="dropdownButton-default"
             >
                 <MenuItem eventKey="1">Action</MenuItem>
                 <MenuItem eventKey="2">Another action</MenuItem>
