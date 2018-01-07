@@ -6,6 +6,7 @@ import { withKnobs, object, array } from '@storybook/addon-knobs/react';
 
 import OrderHeader from 'molecules/OrderHeader.js'
 import Breadcrumb from 'molecules/Breadcrumb.js'
+import Textbox from 'molecules/Textbox.js'
 
 export default () => {
     const stories = storiesOf('Molecules', module);
@@ -28,6 +29,9 @@ export default () => {
         .add('Breadcrumb', () => {
             const levels = array('Level', ['Order', 'TN SO 000015'])
             return <Breadcrumb levels={levels} />
+        })
+        .add('Textbox', () => {
+            return <Textbox />
         })
 }
  
