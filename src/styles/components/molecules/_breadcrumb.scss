@@ -1,0 +1,15 @@
+@mixin breadcrumb-text {
+    font-size: $fontSize-ExtraLarge;
+    color: $colorPurple-Grey;
+}
+
+.breadcrumb-container {
+    @include breadcrumb-text;
+    span:not(:last-child) {
+        opacity: 0.2;
+
+        &:after {
+            content: " / ";
+        }
+    }
+}
