@@ -1,0 +1,19 @@
+.dropdown {
+    button {
+        border: 1px solid #C9C9C9;
+        border-radius: 4px;
+        height: 33px;
+        width: 111.15px;
+        position: relative;
+        color: $dropdownButtonColor-Default;
+        font-size: $fontSize-ExtraSmall;
+        padding: 9% 8.5% 8.5% 12.7%;
+        text-align: left;
+
+        span {
+            position: absolute;
+            right: 12.7%;
+            top: 50%;
+        }
+    }
+}

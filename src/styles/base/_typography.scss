@@ -39,4 +39,10 @@
 @include font-face('montserrat', '../statics/fonts/Montserrat-UltraLight.otf', 'opentype', 'ultralight');
 
 $fontFamily: 'montserrat', sans-serif;
+$fontSize-ExtraSmall : 11px;
+$fontSize-Small : 12px;
 $fontSize-Regular : 14px;
+
+body {
+	font-family: $fontFamily;
+}
