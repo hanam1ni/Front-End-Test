@@ -1,0 +1,41 @@
+.order-header-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-rows: 22.5px 1fr 1fr;
+    grid-auto-flow: column;
+    background: $colorWhite;
+    border: 1px solid rgba(173,179,185,0.51);
+    border-radius: 3px;
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.14);
+    
+    padding: 12px 20px 12px 15px;
+
+    .order-header-detail {
+        align-self: end;
+        h2 {
+            margin: 0;
+            font-size: $fontSize-Large;
+            color: $colorGrey-Dark;
+        }
+    
+        p {
+            margin: 0;
+            margin-top: 5px;
+            font-size: $fontSize-Small;
+            color: $colorGrey-Light;
+        }
+    }
+    
+    .order-select {
+        grid-row-start: 2;
+        grid-row-end: 4;
+        justify-self: center;
+    }
+
+    .order-header-select {
+        justify-self: center;
+        align-self: end;
+        font-size: $fontSize-ExtraSmall;
+        color: $colorGrey-Dark;
+    }
+}
