@@ -18,8 +18,10 @@ export default () => {
             return <Button secondary={secondary}>{label}</Button>
         })
         .add('Dropdown Button', () => {
+            const label = text('Title', 'Default')
+            
             return <DropdownButton
-                title="Default"
+                title={label}
                 className="dropdownButton-default"
             >
                 <MenuItem eventKey="1">Action</MenuItem>
