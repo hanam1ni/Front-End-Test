@@ -1,0 +1,15 @@
+.order-header-detail {    
+    h2 {
+        font-size: $fontSize-Large;
+        color: $colorGrey-Dark;
+    }
+
+    p {
+        font-size: $fontSize-Small;
+        color: $colorGrey-Light;
+    }
+
+    h2, p:not(:last-child) {
+        margin-bottom: 5px;
+    }
+}
