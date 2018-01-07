@@ -1,6 +1,5 @@
 @mixin button($buttonColor, $labelColor) {
-    height: 44px;
-    width: 140px;
+    padding: 13px 20px;
     font-size: $fontSize-Regular;
     @include font-weight('regular');
     line-height: 17px;
