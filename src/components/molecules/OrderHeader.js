@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { DropdownButton } from 'react-bootstrap'
 
 export default class OrderHeader extends Component {
     render() {
-        const {secondary, children} = this.props
-        const buttonClass = secondary ? "button-secondary" : "button-default"
+        const { detail, selection } = this.props
         return <div className="order-header-container">
             <div className="order-header-detail">
-                <h2>CPF Saraburi</h2>
+                <h2>{detail.name}</h2>
             </div>
             <div className="order-header-detail">
-                <p>Highway 2, Kaeng Khoi Saraburi Thailand</p>
+                <p>{detail.address}</p>
             </div>
             <div className="order-header-detail">
-                <p>+66 087 348 79 34</p>
+                <p>{detail.tel}</p>
             </div>
             <div class="order-header-select">
                 <span>Type</span>
             </div>
             <div class="order-select">
                 <DropdownButton
-                    title="Tom Hank"
+                    title={selection.type}
                     className="dropdownButton-default order-dropdown"
                 >
                 </DropdownButton>
@@ -30,7 +30,7 @@ export default class OrderHeader extends Component {
             </div>
             <div class="order-select">
                 <DropdownButton
-                    title="Tom Hank"
+                    title={selection.owner}
                     className="dropdownButton-default order-dropdown"
                 >
                 </DropdownButton>
@@ -40,11 +40,29 @@ export default class OrderHeader extends Component {
             </div>
             <div class="order-select">
                 <DropdownButton
-                    title="Tom Hank"
+                    title={selection.status}
                     className="dropdownButton-default order-dropdown"
                 >
                 </DropdownButton>
             </div>
         </div>
+    }
+}
+
+OrderHeader.propTypes = {
+   detail: PropTypes.object,
+   selection: PropTypes.object
+}
+
+OrderHeader.defaultProps = {
+    detail: {
+        name: ' ',
+        address: ' ',
+        tel: ' ',
+    },
+    selection: {
+        type: ' ',
+        owner: ' ',
+        status: ' ',
     }
 }
