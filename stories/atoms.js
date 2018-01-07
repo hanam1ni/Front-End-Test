@@ -5,6 +5,7 @@ import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
 import { withKnobs, text, boolean  } from '@storybook/addon-knobs/react';
 
 import Button from 'atoms/Button.js'
+import { DropdownButton, MenuItem } from 'react-bootstrap'
 
 export default () => {
     const stories = storiesOf('Atoms', module);
@@ -14,7 +15,21 @@ export default () => {
         .add('Button', () => {
             const label = text('Label', 'Hello Button')
             const secondary = boolean('Secondary', false)
-            return<Button secondary={secondary}>{label}</Button>
+            return <Button secondary={secondary}>{label}</Button>
+        })
+        .add('Dropdown Button', () => {
+            return <DropdownButton
+                bsStyle="default"
+                title="Default"
+            >
+                <MenuItem eventKey="1">Action</MenuItem>
+                <MenuItem eventKey="2">Another action</MenuItem>
+                <MenuItem eventKey="3" active>
+                    Active Item
+                </MenuItem>
+                <MenuItem divider />
+                <MenuItem eventKey="4">Separated link</MenuItem>
+            </DropdownButton>
         })
 }
  
