@@ -76,8 +76,9 @@ export default class ProductTable extends Component {
                 const dataCells = []
                 ColumnOrder.map((order) => {
                     const cellClass = `table-data table-data-${order}`
-                    if(dataKeys.includes(order)) dataCells.push(<td className={cellClass}>{data[order]}</td>)
+                    if (dataKeys.includes(order)) dataCells.push(<td className={cellClass}>{data[order]}</td>)
                 })
+                dataCells.push(<td className="table-data table-data-last"><a>Remove Item</a></td>)
                 tableData.push(<tr>{dataCells}</tr>)
             })
             return tableData
