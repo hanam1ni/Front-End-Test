@@ -1,0 +1,23 @@
+.add-product-input {
+    position: relative;
+    img {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+        height: 20px;
+        width: 20px;
+    }
+    input {
+        height: auto;
+        padding: 17px 0 18px 45px;
+        font-size: $fontSize-Small;
+        line-height: 15px;
+        color: $colorGrey-Light;
+    }
+}
+
+.add-product-input-stretch {
+    width: 100%;
+}

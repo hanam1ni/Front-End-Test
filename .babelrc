@@ -7,6 +7,7 @@
         "module-resolver", {
           "alias": {
             "styles": "./src/styles",
+            "statics": "./src/statics",
             "conatiner": "./src/containers",
             "atoms": "./src/components/atoms",
             "molecules": "./src/components/molecules",
