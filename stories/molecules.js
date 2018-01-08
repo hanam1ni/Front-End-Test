@@ -8,6 +8,7 @@ import OrderHeader from 'molecules/OrderHeader.js'
 import Breadcrumb from 'molecules/Breadcrumb.js'
 import Textbox from 'molecules/Textbox.js'
 import AddProductInput from 'molecules/AddProductInput.js'
+import ProductTable from 'molecules/ProductTable.js'
 
 export default () => {
     const stories = storiesOf('Molecules', module);
@@ -17,7 +18,7 @@ export default () => {
           {story()}
         </div>
     ))
-    
+
     stories
         .add('OrderHeader', () => {
             const orderHeaderDetail = object('Header Detail', {
@@ -45,6 +46,9 @@ export default () => {
             const placeholder = text('Placeholder', 'Add Products')
             const stretch = boolean('Stretch', false)
             return <AddProductInput stretch={stretch} placeholder={placeholder} />
+        })
+        .add('Product Table', () => {
+            return <ProductTable />
         })
 }
  

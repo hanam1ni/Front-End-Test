@@ -1,0 +1,24 @@
+.product-table {
+    border: 1px solid rgba(201,201,201,0.69);
+    border-radius: 4px;
+    
+    .table-header {
+        vertical-align: middle;
+        font-size: 8px;
+        height: 50px;
+    }
+
+    .table-data {
+        vertical-align: middle;
+        height: 64px;
+        font-size: $fontSize-ExtraSmall;
+    }
+
+    .table-data-sku {
+        font-size: $fontSize-Small;
+    }
+
+    .table-data-description {
+        max-width: 100px;
+    }
+}
