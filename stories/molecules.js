@@ -12,7 +12,12 @@ import AddProductInput from 'molecules/AddProductInput.js'
 export default () => {
     const stories = storiesOf('Molecules', module);
     stories.addDecorator(withKnobs);
-
+    stories.addDecorator(story => (
+        <div style={{padding: '20px 50px 50px 50px'}}>
+          {story()}
+        </div>
+    ))
+    
     stories
         .add('OrderHeader', () => {
             const orderHeaderDetail = object('Header Detail', {

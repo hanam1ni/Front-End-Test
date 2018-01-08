@@ -10,7 +10,12 @@ import { DropdownButton, MenuItem } from 'react-bootstrap'
 export default () => {
     const stories = storiesOf('Atoms', module);
     stories.addDecorator(withKnobs);
-
+    stories.addDecorator(story => (
+        <div style={{padding: '20px 50px 50px 50px'}}>
+          {story()}
+        </div>
+    ))
+    
     stories
         .add('Button', () => {
             const label = text('Label', 'Hello Button')
