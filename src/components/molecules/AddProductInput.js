@@ -4,8 +4,14 @@ import addIcon from 'statics/icons/icon_plus.svg'
 
 export default class AddProductInput extends Component {
     render () {
-        return <InputGroup className="add-product-input">
-            <InputGroup.Addon><img role="img" src={addIcon} /></InputGroup.Addon>
+        const { stretch } = this.props
+        const InputGroupClass = [
+            "add-product-input",
+            stretch ? "add-product-input-stretch" : null
+        ].join(' ')
+        console.log(InputGroupClass)
+        return <InputGroup className={InputGroupClass}>
+            <img role="img" src={addIcon} />
             <FormControl type="text" />
         </InputGroup>
     }
