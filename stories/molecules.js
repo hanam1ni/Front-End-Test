@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
-import { withKnobs, object, array, text } from '@storybook/addon-knobs/react';
+import { withKnobs, object, array, text, boolean } from '@storybook/addon-knobs/react';
 
 import OrderHeader from 'molecules/OrderHeader.js'
 import Breadcrumb from 'molecules/Breadcrumb.js'
@@ -37,7 +37,9 @@ export default () => {
             return <Textbox title={title}>{content}</Textbox>
         })
         .add('Add Product Input', () => {
-            return <AddProductInput />
+            const placeholder = text('Placeholder', 'Add Products')
+            const stretch = boolean('Stretch', false)
+            return <AddProductInput stretch={stretch} placeholder={placeholder} />
         })
 }
  
