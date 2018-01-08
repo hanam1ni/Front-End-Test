@@ -1,24 +1,56 @@
 .product-table {
     border: 1px solid rgba(201,201,201,0.69);
     border-radius: 4px;
+    box-shadow: 1px 1px 0 0 #C9C9C9, 0 2px 0 0 rgba(0,0,0,0.15);
     
-    .table-header {
-        vertical-align: middle;
-        font-size: 8px;
-        height: 50px;
-    }
+    thead {
+        .table-header {
+            vertical-align: middle;
+            font-size: 8px;
+            height: 50px;
+            border: none;
+        }
 
-    .table-data {
-        vertical-align: middle;
-        height: 64px;
-        font-size: $fontSize-ExtraSmall;
+        th:nth-child(1) {
+            padding-left: 20px;
+        }
     }
+    
 
-    .table-data-sku {
-        font-size: $fontSize-Small;
-    }
+    tbody {  
+        .table-data {
+            border: none;
+            vertical-align: middle;
+            height: 64px;
+            color: #64707C;
+            font-size: $fontSize-ExtraSmall;
+        }
+    
+        .table-data-sku {
+            font-size: $fontSize-Small;
+        }
+    
+        .table-data-description {
+            
+        }
 
-    .table-data-description {
-        max-width: 100px;
+        .table-data-last {
+            a {
+                color: $colorGrey-Dark;
+                cursor: pointer;
+            }
+        }
+        
+        tr:nth-child(even) {
+            background-color: $colorWhite;
+        }
+    
+        tr:nth-child(odd) {
+            background-color: #F8F8F8;
+        }
+        
+        td:nth-child(1) {
+            padding-left: 20px;
+        }
     }
 }
