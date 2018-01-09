@@ -42,7 +42,8 @@ export default () => {
         .add('Input', () => {
             const placeholder = text('Placeholder', 'Enter Value')
             const disabled = boolean('Disabled', false)
-            return <Input placeholder={placeholder} disabled={disabled} />
+            const stretch = boolean('Stretch', false)
+            return <Input placeholder={placeholder} disabled={disabled} stretch={stretch} />
         })
 }
  
