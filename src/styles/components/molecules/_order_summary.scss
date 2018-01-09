@@ -1,9 +1,9 @@
 .order-summary-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 100px;
     grid-row-gap: 10px;
     grid-auto-rows: auto;
-    width: 292px;
+    width: 300px;
 
     box-shadow: 0 2px 14px 0 rgba(0,0,0,0.12);
     padding: 10px 16px 30px 16px;
@@ -21,6 +21,17 @@
         justify-self: end;
         font-size: 11px;
     }
+    
+    .order-summary-tax {
+        display: grid;
+        grid-template-columns: 28px auto;
+        grid-column-gap: 5px;
+        justify-self: start;
+        
+        div {
+            align-self: center;
+        }
+    }
 
     .order-summary-header {
         align-self: center;
@@ -34,8 +45,10 @@
 
     .order-summary-total {
         font-size: $fontSize-Regular;
-        span {
-            font-size: 18px;
-        }
+        justify-items: stretch;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+      
     }
 }

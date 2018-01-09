@@ -32,16 +32,22 @@ export default class OrderSummary extends Component {
             <div className="order-summary-header">
                 Tax
             </div>
-            <div className="order-summary-data">
-                <Input defaultValue="7" />
-                <span> % 1,826.00</span>
+            <div className="order-summary-data order-summary-tax">
+                <div>
+                    <Input defaultValue="7" className="input-tax" stretch/>
+                </div>
+                <div>
+                    <span>% 1,826.00</span>
+                </div>
             </div>
             <div class="line-separator"></div>
             <div className="order-summary-header order-summary-total">
-                Total
-            </div>
-            <div className="order-summary-data order-summary-total">
-                <span>THB 41,585.31</span>
+                <div class="order-total-header">
+                    Total
+                </div>
+                <div class="order-total-data">
+                    <span>THB 41,585.31</span>
+                </div>
             </div>
         </div>
     }
