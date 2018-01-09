@@ -1,0 +1,41 @@
+.order-summary-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-auto-rows: auto;
+    width: 292px;
+
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.12);
+    padding: 10px 16px 30px 16px;
+
+    .line-separator {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        height: 2px;
+        border: 1px solid #F1F0F4;
+    }
+
+    .order-summary-data {
+        align-self: center;
+        justify-self: end;
+        font-size: 11px;
+    }
+
+    .order-summary-header {
+        align-self: center;
+        justify-self: start;
+        font-size: $fontSize-ExtraSmall;
+    }
+
+    .order-summary-sub-total {
+        font-size: $fontSize-Small;
+    }
+
+    .order-summary-total {
+        font-size: $fontSize-Regular;
+        span {
+            font-size: 18px;
+        }
+    }
+}
