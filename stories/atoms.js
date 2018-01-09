@@ -5,6 +5,7 @@ import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
 import { withKnobs, text, boolean  } from '@storybook/addon-knobs/react';
 
 import Button from 'atoms/Button.js'
+import Input from 'atoms/Input.js'
 import { DropdownButton, MenuItem } from 'react-bootstrap'
 
 export default () => {
@@ -37,6 +38,9 @@ export default () => {
                 <MenuItem divider />
                 <MenuItem eventKey="4">Separated link</MenuItem>
             </DropdownButton>
+        })
+        .add('Input', () => {
+            return <Input value={123} disabled />
         })
 }
  

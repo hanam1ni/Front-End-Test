@@ -1,0 +1,14 @@
+.form-control {
+    height: auto;
+    padding: 7px 0 6px 0;
+    border: 1px solid #8899AA !important;
+    border-radius: 4px !important;
+    font-size: $fontSize-ExtraSmall;
+    line-height: 15px;
+    color: #C9C9C9;
+    text-align: center;
+
+    &:disabled {
+        background-color: $colorWhite;
+    }
+}
