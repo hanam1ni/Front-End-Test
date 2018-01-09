@@ -40,7 +40,9 @@ export default () => {
             </DropdownButton>
         })
         .add('Input', () => {
-            return <Input value={123} disabled />
+            const placeholder = text('Placeholder', 'Enter Value')
+            const disabled = boolean('Disabled', false)
+            return <Input placeholder={placeholder} disabled={disabled} />
         })
 }
  
