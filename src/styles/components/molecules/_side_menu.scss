@@ -2,10 +2,9 @@
     display: grid;
     grid-template-columns: minmax(auto, 70px) 1fr;
     grid-auto-rows: 67px;
-    min-height: 67px;
     position: relative;
     cursor: pointer;
-    
+
     @if $isActive {
         background-color: $colorPurple-Dark;
         color: $colorWhite;
@@ -53,9 +52,7 @@
 .side-menu-container {
     display: grid;
     grid-auto-flow: row;
-    path {
-        fill: black;
-    }
+
    .side-menu-item {
         @include side-menu-item(false);
    }

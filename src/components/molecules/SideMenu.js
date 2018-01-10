@@ -1,24 +1,52 @@
 import React, { Component } from 'react';
 
 export default class SideMenu extends Component {
-    handleItemClick (a) {
-        console.log(a)
+    constructor(props) {
+        super(props);
+        this.state = {
+            itemActive: 2,
+        };
+    }
+
+    handleItemClick (itemKey) {
+        this.setState({
+            itemActive: itemKey,
+        })
     }
 
     render () {
-        const MenuItem = (active) => {
-            return <div className="side-menu-item" onClick={() => {this.handleItemClick(1)}}>
+        const mockSideMenu = [
+            {
+                itemIcon: "statics/icons/icon_plus.svg",
+                title: "Dashboard"
+            },
+            {
+                itemIcon: "statics/icons/icon_plus.svg",
+                title: "Orders"
+            },
+            {
+                itemIcon: "statics/icons/icon_plus.svg",
+                title: "Companies",
+                hasChild: true,
+            }
+        ]
+        const MenuItem = (item, itemKey) => {
+            const isActive = itemKey === this.state.itemActive
+            const { itemIcon, title, hasChild = false } = item
+            const itemClass = isActive ? "side-menu-item-active" : "side-menu-item"
+            return <div className={itemClass} key={title} onClick={() => {this.handleItemClick(itemKey)}}>
                 <div className="side-menu-icon">
-                    { active && <div className="side-menu-active"></div> }
-                    <img role="img" src={require("statics/icons/icon_plus.svg")} className="item-icon" />
+                    <div className="active-tab"></div>
+                    <img src={require("statics/icons/icon_plus.svg")} className="item-icon" />
                 </div>
                 <div className="side-menu-title">
-                    Dashboard
+                    {title}
+                    { hasChild &&  <img src={require("statics/icons/arrow-grey.svg")} className="arrow-icon" /> }
                 </div>
             </div>
         }
         return <div className="side-menu-container">
-            {MenuItem(true)}
+            {mockSideMenu.map((item, itemKey) => (MenuItem(item, itemKey)))}
         </div>
     }
 }
