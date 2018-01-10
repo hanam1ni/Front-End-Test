@@ -8,6 +8,7 @@
     box-shadow: 0 2px 14px 0 rgba(0,0,0,0.12);
     padding: 10px 16px 30px 16px;
 
+    color: $colorGrey-Dark;
     .line-separator {
         grid-column-start: 1;
         grid-column-end: 3;
@@ -45,10 +46,19 @@
 
     .order-summary-total {
         font-size: $fontSize-Regular;
-        justify-items: stretch;
+        display: grid;
         grid-column-start: 1;
         grid-column-end: 3;
+        grid-template-columns: 1fr 1fr;
         
-      
+        .order-total-header {
+            align-self: center;
+        }
+
+        .order-total-data {
+            font-size: 18px;
+            align-self: center;
+            justify-self: end;
+        }
     }
 }

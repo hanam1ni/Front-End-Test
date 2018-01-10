@@ -41,7 +41,7 @@ export default class OrderSummary extends Component {
                 </div>
             </div>
             <div class="line-separator"></div>
-            <div className="order-summary-header order-summary-total">
+            <div className="order-summary-total">
                 <div class="order-total-header">
                     Total
                 </div>
