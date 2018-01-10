@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { Table } from 'react-bootstrap'
+
 export default class ProductTable extends Component {
     render() {
-        const MockColumn = [
+        const mockColumn = [
             {
                 title: 'SKU',
                 data: 'sku'
@@ -17,7 +18,7 @@ export default class ProductTable extends Component {
             },
             {
                 title: 'LIST PRICE',
-                data: 'listPrice'
+                data: 'listPrice',
             },
             {
                 title: 'DISCOUNT',
@@ -25,7 +26,7 @@ export default class ProductTable extends Component {
             },
             {
                 title: 'NET PRICE',
-                data: 'netPrice'
+                data: 'netPrice',
             },
             {
                 title: 'QTY',
@@ -33,13 +34,14 @@ export default class ProductTable extends Component {
             },
             {
                 title: 'TOTAL',
-                data: 'total'
+                data: 'total',
+                type: 'price',
             },
             {
                 title: ' ',
             }
         ]
-        const MockData = [
+        const mockData = [
             {
                 sku: 'TN SO 000015',
                 description: 'Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac',
@@ -62,19 +64,18 @@ export default class ProductTable extends Component {
             }
         ]
 
-        const ColumnOrder = MockColumn.map((column) => (column.data))
-
         const TableHeader = () => {
-            const tableHeaders = ['SKU', 'DESCRIPTION', 'BRAND', 'LIST PRICE', 'DISCOUNT', 'NET PRICE', 'QTY', 'TOTAL', ' '] 
+            const tableHeaders = mockColumn.map((column) => (column.title))
             return tableHeaders.map((header) => (<th className="table-header">{header}</th>))
         }
 
         const TableData = () => {
             const tableData = []
-            MockData.map((data) => {
+            const columnOrder = mockColumn.map((column) => (column.data))
+            mockData.map((data) => {
                 const dataKeys = Object.keys(data)
                 const dataCells = []
-                ColumnOrder.map((order) => {
+                columnOrder.map((order) => {
                     const cellClass = `table-data table-data-${order}`
                     if (dataKeys.includes(order)) dataCells.push(<td className={cellClass}>{data[order]}</td>)
                 })
