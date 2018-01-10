@@ -48,7 +48,7 @@ export default () => {
             return <AddProductInput stretch={stretch} placeholder={placeholder} />
         })
         .add('Side Menu', () => {
-            return <div style={{width: '200px'}}>
+            return <div style={{width: '246px'}}>
                 <SideMenu />
             </div>
         })
