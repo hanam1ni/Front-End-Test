@@ -4,7 +4,7 @@ export default class SideMenu extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            itemActive: 2,
+            itemActive: null,
         };
     }
 
