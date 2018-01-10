@@ -8,6 +8,7 @@ import OrderHeader from 'molecules/OrderHeader.js'
 import Breadcrumb from 'molecules/Breadcrumb.js'
 import Textbox from 'molecules/Textbox.js'
 import AddProductInput from 'molecules/AddProductInput.js'
+import SideMenu from 'molecules/SideMenu.js'
 
 export default () => {
     const stories = storiesOf('Molecules', module);
@@ -45,6 +46,11 @@ export default () => {
             const placeholder = text('Placeholder', 'Add Products')
             const stretch = boolean('Stretch', false)
             return <AddProductInput stretch={stretch} placeholder={placeholder} />
+        })
+        .add('Side Menu', () => {
+            return <div style={{width: '200px'}}>
+                <SideMenu />
+            </div>
         })
 }
  

@@ -1,0 +1,40 @@
+.side-menu-container {
+    display: grid;
+    grid-auto-flow: row;
+    
+    .side-menu-item {
+        display: grid;
+        grid-template-columns: minmax(auto, 70px) 1fr;
+        min-height: 67px;
+        background-color: $colorPurple-Light;
+
+        .side-menu-icon {
+            position: relative;
+            align-self: center;
+            
+            .item-icon {
+                width: 17px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .side-menu-active {
+                position: absolute;
+                height: 40px;
+                width: 6px;
+                border-radius: 4px;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                background-color: green;
+            }
+        }
+    
+        .side-menu-title {
+            align-self: center;
+            font-size: $fontSize-Regular;
+            color: $colorPink;
+        }
+    }
+}
