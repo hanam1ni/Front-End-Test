@@ -37,6 +37,6 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --open",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook -s ./src/statics"
   }
 }

@@ -15,38 +15,71 @@ export default class SideMenu extends Component {
     }
 
     render () {
-        const mockSideMenu = [
+        const sideMenuContent = [
             {
-                itemIcon: "statics/icons/icon_plus.svg",
+                itemIcon: "controls",
                 title: "Dashboard"
             },
             {
-                itemIcon: "statics/icons/icon_plus.svg",
+                itemIcon: "shopping-cart",
                 title: "Orders"
             },
             {
-                itemIcon: "statics/icons/icon_plus.svg",
+                itemIcon: "factory",
                 title: "Companies",
-                hasChild: true,
+                hasChild: true
+            },
+            {
+                itemIcon: "box",
+                title: "Products"
+            },
+            {
+                itemIcon: "document",
+                title: "Documents"
+            },
+            {
+                itemIcon: "pricing-label",
+                title: "Pricing"
+            },
+            {
+                itemIcon: "shapes",
+                title: "Brands"
+            },
+            {
+                itemIcon: "gear",
+                title: "Settnigs",
+                hasChild: true
+            },
+            {
+                itemIcon: "hierarchy",
+                title: "Reports"
+            },
+            {
+                itemIcon: "people",
+                title: "Account Users"
             }
         ]
+
         const MenuItem = (item, itemKey) => {
             const isActive = itemKey === this.state.itemActive
             const { itemIcon, title, hasChild = false } = item
+            const urlIcon = `/icons/${itemIcon}-purple.svg`
+            const urlActiveIcon = `/icons/${itemIcon}-white.svg`
             const itemClass = isActive ? "side-menu-item-active" : "side-menu-item"
             return <div className={itemClass} key={title} onClick={() => {this.handleItemClick(itemKey)}}>
                 <div className="side-menu-icon">
                     <div className="active-tab"></div>
-                    <img src={require("statics/icons/icon_plus.svg")} className="item-icon" />
+                    <img src={ isActive ? urlActiveIcon : urlIcon } className="item-icon" />
                 </div>
                 <div className="side-menu-title">
                     {title}
-                    { hasChild &&  <img src={require("statics/icons/arrow-grey.svg")} className="arrow-icon" /> }
+                    { hasChild &&  <img src={ isActive ? "/icons/arrow-white.svg" : "/icons/arrow-purple.svg" } className="arrow-icon" /> }
                 </div>
             </div>
         }
+
         return <div className="side-menu-container">
-            {mockSideMenu.map((item, itemKey) => (MenuItem(item, itemKey)))}
+            {sideMenuContent.map((item, itemKey) => (MenuItem(item, itemKey)))}
         </div>
     }
 }
