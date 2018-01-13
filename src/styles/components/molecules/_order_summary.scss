@@ -3,13 +3,12 @@
     grid-template-columns: minmax(auto, 140px) min-content;
     grid-row-gap: 10px;
     grid-auto-rows: auto;
-    max-width: 60%;
     overflow-wrap: break-word;
     overflow-x: auto; 
     
     box-shadow: 0 2px 14px 0 rgba(0,0,0,0.12);
     padding: 10px 16px 30px 16px;
-
+    background-color: $colorWhite;
     color: $colorGrey-Dark;
     .line-separator {
         grid-column-start: 1;
