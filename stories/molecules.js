@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
-import { withKnobs, object, array, text, boolean } from '@storybook/addon-knobs/react';
+import { withKnobs, object, array, text, boolean, number } from '@storybook/addon-knobs/react';
 
 import OrderHeader from 'molecules/OrderHeader.js'
 import Breadcrumb from 'molecules/Breadcrumb.js'
@@ -48,7 +48,22 @@ export default () => {
             return <AddProductInput stretch={stretch} placeholder={placeholder} />
         })
         .add('Order Summary', () => {
-            return <OrderSummary />
+            const deliveryDate = text('Estimated Delivery Date', '14-10-2016')
+            const subTotal = number('Sub-Total', 40033)
+            const shipping = number('Shipping', 0)
+            const discount = number('Special Discount', 9999.999)
+            const taxPercent = number('Tax Percent', 7)
+            const taxValue = number('Tax Value', 1826.00)
+            const total = number('Total', 41585.31)
+            return <OrderSummary 
+                deliveryDate={deliveryDate}
+                subTotal={subTotal}
+                shipping={shipping}
+                discount={discount}
+                taxPercent={taxPercent}
+                taxValue={taxValue}
+                total={total}
+            />
         })
 }
  
