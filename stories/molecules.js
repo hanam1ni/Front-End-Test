@@ -48,7 +48,27 @@ export default () => {
             return <AddProductInput stretch={stretch} placeholder={placeholder} />
         })
         .add('Product Table', () => {
-            return <ProductTable />
+            const tableData = object("Table Contet" , [
+                {
+                    sku: 'TN SO 000015',
+                    description: 'Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac',
+                    brand: 'Schneider Electric',
+                    listPrice: 'THB 880',
+                    discount: '30%',
+                    netPrice: 'THB 660',
+                    qty: '16',
+                    total: 'THB 50,079,8823'
+                },
+                {
+                    sku: 'TN SO 000015',
+                    description: 'Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac',
+                    brand: 'Schneider Electric',
+                    discount: '30%',
+                    netPrice: 'THB 660',
+                    qty: '16',
+                }
+            ])
+            return <ProductTable tableData={tableData} />
         })
 }
  
