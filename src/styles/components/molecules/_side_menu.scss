@@ -1,0 +1,64 @@
+@mixin side-menu-item($isActive) {
+    display: grid;
+    grid-template-columns: minmax(auto, 70px) 1fr;
+    grid-template-rows: 67px;
+    grid-auto-rows: 30px;
+    position: relative;
+    cursor: pointer;
+
+    @if $isActive {
+        background-color: $colorPurple-Dark;
+        color: $colorWhite;
+
+        .active-tab {
+            position: absolute;
+            height: 40.92px;
+            width: 6px;
+            border-radius: 0 17px 17px 0;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            background-color: $colorGreen;
+        }
+    }
+    @else {
+        background-color: $colorPurple-Light;
+        color: $colorPink;
+    }
+    .side-menu-icon {
+        align-self: center;
+        .item-icon {
+            width: 17px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .side-menu-title {
+        align-self: center;
+        font-size: $fontSize-Regular;
+    }
+
+    .arrow-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 7px;
+        height: 12px;
+        right: 14.5px;
+    }
+}
+
+.side-menu-container {
+    display: grid;
+    grid-auto-flow: row;
+
+   .side-menu-item {
+        @include side-menu-item(false);
+   }
+
+   .side-menu-item-active {
+        @include side-menu-item(true);
+   }
+}

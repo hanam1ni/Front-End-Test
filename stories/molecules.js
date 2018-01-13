@@ -9,6 +9,7 @@ import Breadcrumb from 'molecules/Breadcrumb.js'
 import Textbox from 'molecules/Textbox.js'
 import AddProductInput from 'molecules/AddProductInput.js'
 import ProductTable from 'molecules/ProductTable.js'
+import SideMenu from 'molecules/SideMenu.js'
 
 export default () => {
     const stories = storiesOf('Molecules', module);
@@ -69,6 +70,11 @@ export default () => {
                 }
             ])
             return <ProductTable tableData={tableData} />
+        })
+        .add('Side Menu', () => {
+            return <div style={{width: '246px'}}>
+                <SideMenu />
+            </div>
         })
 }
  
