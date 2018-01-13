@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions'
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
 
 import Sidebar from 'organisms/Sidebar.js'
+import EditOrderSubPage from 'organisms/EditOrderSubPage.js'
 
 export default () => {
     const stories = storiesOf('Organisms', module);
@@ -13,5 +14,8 @@ export default () => {
             return <div style={{height: '1000px'}}>
                 <Sidebar />
             </div>
+        })
+        .add('Edit Order Sub Page', () => {
+            return <EditOrderSubPage />
         })
 }
