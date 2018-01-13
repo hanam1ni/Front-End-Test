@@ -26,12 +26,17 @@
     
     .order-summary-tax {
         display: grid;
-        grid-template-columns: 28px auto;
+        grid-template-columns: 28px auto 1fr;
         grid-column-gap: 5px;
-        justify-self: start;
-        
         div {
             align-self: center;
+        }
+
+        .order-summary-tax-percent{
+            justify-self: start;
+        }
+        .order-summary-tax-value{
+            justify-self: end;
         }
     }
 
