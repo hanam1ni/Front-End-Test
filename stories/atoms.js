@@ -6,6 +6,7 @@ import { withKnobs, text, boolean  } from '@storybook/addon-knobs/react';
 
 import Button from 'atoms/Button.js'
 import Input from 'atoms/Input.js'
+import Select from 'atoms/Select.js'
 import { DropdownButton, MenuItem } from 'react-bootstrap'
 
 export default () => {
@@ -44,6 +45,9 @@ export default () => {
             const disabled = boolean('Disabled', false)
             const stretch = boolean('Stretch', false)
             return <Input placeholder={placeholder} disabled={disabled} stretch={stretch} />
+        })
+        .add('Select', () => {
+            return <Select />
         })
 }
  
