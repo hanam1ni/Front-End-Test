@@ -2,12 +2,13 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
-import { withKnobs, object, array, text, boolean } from '@storybook/addon-knobs/react';
+import { withKnobs, object, array, text, boolean, number } from '@storybook/addon-knobs/react';
 
 import OrderHeader from 'molecules/OrderHeader.js'
 import Breadcrumb from 'molecules/Breadcrumb.js'
 import Textbox from 'molecules/Textbox.js'
 import AddProductInput from 'molecules/AddProductInput.js'
+import OrderSummary from 'molecules/OrderSummary.js'
 import ProductTable from 'molecules/ProductTable.js'
 import SideMenu from 'molecules/SideMenu.js'
 
@@ -48,6 +49,19 @@ export default () => {
             const stretch = boolean('Stretch', false)
             return <AddProductInput stretch={stretch} placeholder={placeholder} />
         })
+        .add('Order Summary', () => {
+            const summaryData = object('Order Summary', {
+                deliveryDate: '14-10-2016',
+                subTotal: 40033,
+                shipping: 0,
+                discount: 9999.999,
+                tax: {
+                    percent: 7,
+                    value: 1826
+                },
+                total: 41585.31 
+            })
+            return <OrderSummary summaryData={summaryData} />
         .add('Product Table', () => {
             const tableData = object("Table Contet" , [
                 {
