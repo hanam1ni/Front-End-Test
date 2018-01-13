@@ -11,8 +11,7 @@
             "conatiner": "./src/containers",
             "atoms": "./src/components/atoms",
             "molecules": "./src/components/molecules",
-            "organisms": "./src/components/organisms",
-            "ecosystems": "./src/components/ecosystems"
+            "organisms": "./src/components/organisms"
           }
         }]
     ]
