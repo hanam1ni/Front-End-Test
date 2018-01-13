@@ -48,22 +48,18 @@ export default () => {
             return <AddProductInput stretch={stretch} placeholder={placeholder} />
         })
         .add('Order Summary', () => {
-            const deliveryDate = text('Estimated Delivery Date', '14-10-2016')
-            const subTotal = number('Sub-Total', 40033)
-            const shipping = number('Shipping', 0)
-            const discount = number('Special Discount', 9999.999)
-            const taxPercent = number('Tax Percent', 7)
-            const taxValue = number('Tax Value', 1826.00)
-            const total = number('Total', 41585.31)
-            return <OrderSummary 
-                deliveryDate={deliveryDate}
-                subTotal={subTotal}
-                shipping={shipping}
-                discount={discount}
-                taxPercent={taxPercent}
-                taxValue={taxValue}
-                total={total}
-            />
+            const summaryData = object('Order Summary', {
+                deliveryDate: '14-10-2016',
+                subTotal: 40033,
+                shipping: 0,
+                discount: 9999.999,
+                tax: {
+                    percent: 7,
+                    value: 1826
+                },
+                total: 41585.31 
+            })
+            return <OrderSummary summaryData={summaryData} />
         })
 }
  
