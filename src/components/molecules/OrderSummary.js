@@ -55,7 +55,7 @@ export default class OrderSummary extends Component {
                     Total
                 </div>
                 <div class="order-total-data">
-                    <span>{total.toLocaleString()}</span>
+                    THB {total.toLocaleString()}
                 </div>
             </div>
         </div>

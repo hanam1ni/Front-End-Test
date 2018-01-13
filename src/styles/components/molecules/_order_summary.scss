@@ -1,10 +1,12 @@
 .order-summary-container {
-    display: grid;
-    grid-template-columns: auto 100px;
+    display: inline-grid;
+    grid-template-columns: minmax(auto, 140px) min-content;
     grid-row-gap: 10px;
     grid-auto-rows: auto;
-    width: 300px;
-
+    max-width: 60%;
+    overflow-wrap: break-word;
+    overflow-x: auto; 
+    
     box-shadow: 0 2px 14px 0 rgba(0,0,0,0.12);
     padding: 10px 16px 30px 16px;
 
@@ -26,8 +28,10 @@
     
     .order-summary-tax {
         display: grid;
-        grid-template-columns: 28px auto 1fr;
+        justify-self: end;
+        grid-template-columns: 28px min-content min-content;
         grid-column-gap: 5px;
+
         div {
             align-self: center;
         }
@@ -55,7 +59,8 @@
         display: grid;
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 5px;
+        grid-template-columns: 100px 1fr;
         
         .order-total-header {
             align-self: center;
@@ -64,6 +69,7 @@
         .order-total-data {
             font-size: 18px;
             align-self: center;
+            white-space: nowrap;
             justify-self: end;
         }
     }
