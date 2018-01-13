@@ -24,8 +24,17 @@
             height: 64px;
             color: #64707C;
             font-size: $fontSize-ExtraSmall;
+
+            a {
+                color: $colorRed;
+            }
         }
-    
+        
+        a {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
         .table-data-sku {
             font-size: $fontSize-Small;
         }
@@ -37,8 +46,6 @@
         .table-data-last {
             a {
                 color: $colorGrey-Dark;
-                cursor: pointer;
-                text-decoration: underline;
             }
         }
         
