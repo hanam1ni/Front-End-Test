@@ -8,6 +8,7 @@ import OrderHeader from 'molecules/OrderHeader.js'
 import Breadcrumb from 'molecules/Breadcrumb.js'
 import Textbox from 'molecules/Textbox.js'
 import AddProductInput from 'molecules/AddProductInput.js'
+import ProductTable from 'molecules/ProductTable.js'
 import SideMenu from 'molecules/SideMenu.js'
 
 export default () => {
@@ -18,7 +19,7 @@ export default () => {
           {story()}
         </div>
     ))
-    
+
     stories
         .add('OrderHeader', () => {
             const orderHeaderDetail = object('Header Detail', {
@@ -46,6 +47,29 @@ export default () => {
             const placeholder = text('Placeholder', 'Add Products')
             const stretch = boolean('Stretch', false)
             return <AddProductInput stretch={stretch} placeholder={placeholder} />
+        })
+        .add('Product Table', () => {
+            const tableData = object("Table Contet" , [
+                {
+                    sku: 'TN SO 000015',
+                    description: 'Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac',
+                    brand: 'Schneider Electric',
+                    listPrice: 'THB 880',
+                    discount: '30%',
+                    netPrice: 'THB 660',
+                    qty: '16',
+                    total: 'THB 50,079,8823'
+                },
+                {
+                    sku: 'TN SO 000015',
+                    description: 'Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac',
+                    brand: 'Schneider Electric',
+                    discount: '30%',
+                    netPrice: 'THB 660',
+                    qty: '16',
+                }
+            ])
+            return <ProductTable tableData={tableData} />
         })
         .add('Side Menu', () => {
             return <div style={{width: '246px'}}>
