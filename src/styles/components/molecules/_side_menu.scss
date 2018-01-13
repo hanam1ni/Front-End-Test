@@ -1,7 +1,7 @@
 @mixin side-menu-item($isActive) {
     display: grid;
     grid-template-columns: minmax(auto, 70px) 1fr;
-    grid-template-rows: 67px;
+    grid-template-rows: minmax(50px, 67px);
     grid-auto-rows: 30px;
     position: relative;
     cursor: pointer;

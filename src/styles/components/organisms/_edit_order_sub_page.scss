@@ -1,6 +1,6 @@
 .edit-order-page-container {
     display: grid;
-    padding: 100px 70px 30px 35px;
+    padding: 100px 70px 300px 35px;
     grid-template-columns: auto;
     grid-auto-rows: min-content;
     grid-row-gap: 15px;
@@ -12,6 +12,7 @@
     .edit-order-header {
         display: grid;
         grid-template-columns: 10fr 3fr;
+        grid-column-gap: 20px;
 
         .edit-order-order-header {
 

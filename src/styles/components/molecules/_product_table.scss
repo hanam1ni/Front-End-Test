@@ -38,22 +38,25 @@
         .table-data-sku {
             font-size: $fontSize-Small;
         }
-    
-        .table-data-description {
-            
-        }
 
+        .table-data-qty {
+            .edit-icon {
+                height: 17px;
+                width: 17px;
+            }
+        }
+    
         .table-data-last {
             a {
                 color: $colorGrey-Dark;
             }
         }
         
-        tr:nth-child(even) {
+        tr:nth-child(odd) {
             background-color: $colorWhite;
         }
     
-        tr:nth-child(odd) {
+        tr:nth-child(even) {
             background-color: #F8F8F8;
         }
         
