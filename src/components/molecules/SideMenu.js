@@ -47,11 +47,11 @@ export default class SideMenu extends Component {
             },
             {
                 itemIcon: "gear",
-                title: "Settnigs",
+                title: "Settings",
                 hasChild: true
             },
             {
-                itemIcon: "hierarchy",
+                itemIcon: "chart",
                 title: "Reports"
             },
             {
