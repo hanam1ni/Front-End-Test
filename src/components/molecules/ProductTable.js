@@ -70,7 +70,7 @@ export default class ProductTable extends Component {
                 isNil(netPrice) ? dataRow.push(<td className="table-data table-data-netPrice" key={`netPrice${index}`} ><a>Set Price</a></td>)
                 : dataRow.push(<td className="table-data table-data-netPrice" key={`${netPrice}${index}`} >{netPrice}</td>)
                 // Quantity Cell
-                dataRow.push(<td className="table-data table-data-qty" key={`${qty}${index}`} >{qty}</td>)
+                dataRow.push(<td className="table-data table-data-qty" key={`${qty}${index}`} >{qty} <a><img src="icons/icon_edit.svg" className="edit-icon"/></a></td>)
                 // Total Cell
                 isNil(total) ? dataRow.push(<td className="table-data table-data-total" key={`total${index}`} ><a>Set Price</a></td>)
                 : dataRow.push(<td className="table-data table-data-total" key={`${total}${index}`} >{total}</td>)
