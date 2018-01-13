@@ -62,6 +62,7 @@ export default () => {
                 total: 41585.31 
             })
             return <OrderSummary summaryData={summaryData} />
+        })
         .add('Product Table', () => {
             const tableData = object("Table Contet" , [
                 {
