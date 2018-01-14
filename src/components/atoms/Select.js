@@ -4,11 +4,11 @@ import { InputGroup, FormControl } from 'react-bootstrap';
 
 export default class Select extends Component {
     render () {
-        const { styleClass, children } = this.props
+        const { styleClass, children, defaultOption } = this.props
         const selectClass = styleClass ? `select-container ${styleClass}` : 'select-container'
         return (
             <div className={selectClass}>
-                <FormControl componentClass="select" className="select-default" defaultValue="second">
+                <FormControl componentClass="select" className="select-default" defaultValue={defaultOption}>
                     {children}
                 </FormControl>
                 <div class="select-arrow"></div>
@@ -19,10 +19,12 @@ export default class Select extends Component {
 
 Select.propTypes = {
     children: PropTypes.node,
-    styleClass: PropTypes.string
+    styleClass: PropTypes.string,
+    defaultOption: PropTypes.string,
 }
 
 Select.defaultProps = {
     children: null,
-    styleClass: ''
+    styleClass: '',
+    defaultOption: ''
 }
