@@ -8,42 +8,26 @@ export default class OrderHeader extends Component {
         return <div className="order-header-container">
             <div className="order-header-detail">
                 <h2>{detail.name}</h2>
-            </div>
-            <div className="order-header-detail">
                 <p>{detail.address}</p>
-            </div>
-            <div className="order-header-detail">
                 <p>{detail.tel}</p>
             </div>
             <div class="order-header-select">
                 <span>Type</span>
-            </div>
-            <div class="order-select">
-                <DropdownButton
-                    title={selection.type}
-                    className="dropdownButton-default order-dropdown"
-                >
-                </DropdownButton>
+                <Select defaultOption={selection.type}>
+                { selection.type.map((type) => <option value={type.value}>{type.title}</option>) }
+                </Select>
             </div>
             <div class="order-header-select">
                 <span>Owned By</span>
-            </div>
-            <div class="order-select">
-                <DropdownButton
-                    title={selection.owner}
-                    className="dropdownButton-default order-dropdown"
-                >
-                </DropdownButton>
+                <Select defaultOption={selection.owner}>
+                { selection.owner.map((owner) => <option value={owner.value}>{owner.title}</option>) }
+                </Select>
             </div>
             <div class="order-header-select">
                 <span>Status</span>
-            </div>
-            <div class="order-select">
-                <DropdownButton
-                    title={selection.status}
-                    className="dropdownButton-default order-dropdown"
-                >
-                </DropdownButton>
+                <Select defaultOption={selection.status}>
+                { selection.status.map((status) => <option value={status.value}>{status.title}</option>) }
+                </Select>
             </div>
         </div>
     }

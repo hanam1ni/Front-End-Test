@@ -29,9 +29,24 @@ export default () => {
                 tel: '+66 087 348 79 34',
             })
             const orderHeaderSelect = object('Header Selection', {
-                type: 'Retailers',
-                owner: 'Tom Hank',
-                status: 'Pending',
+                type: [
+                    {
+                        value: 'retailers',
+                        title: 'Retailers'
+                    }
+                ],
+                owner: [
+                    {
+                        value: 'tomHank',
+                        title: 'Tom Hank'
+                    }
+                ],
+                status: [
+                    {
+                        value: 'pending',
+                        title: 'Pending'
+                    }
+                ]
             })
             return <OrderHeader detail={orderHeaderDetail} selection={orderHeaderSelect}></OrderHeader>
         })

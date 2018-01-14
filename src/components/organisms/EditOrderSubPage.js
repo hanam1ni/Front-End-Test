@@ -15,9 +15,24 @@ export default class EditOrderPage extends Component {
             tel: '+66 087 348 79 34',
         }
         const orderHeaderSelect = {
-            type: 'Retailers',
-            owner: 'Tom Hank',
-            status: 'Pending',
+            type: [
+                {
+                    value: 'retailers',
+                    title: 'Retailers'
+                }
+            ],
+            owner: [
+                {
+                    value: 'tomHank',
+                    title: 'Tom Hank'
+                }
+            ],
+            status: [
+                {
+                    value: 'pending',
+                    title: 'Pending'
+                }
+            ]
         }
         const tableData = [
             {
