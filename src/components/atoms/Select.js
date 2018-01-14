@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import { InputGroup, FormControl } from 'react-bootstrap';
 
 export default class Select extends Component {
     render () {
+        const { styleClass, children } = this.props
+        const selectClass = styleClass ? `select-container ${styleClass}` : 'select-container'
         return (
-            <div className="select-container">
+            <div className={selectClass}>
                 <FormControl componentClass="select" className="select-default" defaultValue="second">
-                    <option value="selects">Selects</option>
-                    <option value="second">Second</option>
-                    <option value="other">...</option>
+                    {children}
                 </FormControl>
                 <div class="select-arrow"></div>
             </div>
         )
     }
+}
+
+Select.propTypes = {
+    children: PropTypes.node,
+    styleClass: PropTypes.string
+}
+
+Select.defaultProps = {
+    children: null,
+    styleClass: ''
 }

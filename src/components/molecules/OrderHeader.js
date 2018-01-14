@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { DropdownButton } from 'react-bootstrap'
+import Select from 'atoms/Select.js'
 
 export default class OrderHeader extends Component {
     render() {

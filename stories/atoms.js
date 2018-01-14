@@ -47,7 +47,13 @@ export default () => {
             return <Input placeholder={placeholder} disabled={disabled} stretch={stretch} />
         })
         .add('Select', () => {
-            return <Select />
+            return (
+                <Select>
+                    <option value="selects">Selects</option>
+                    <option value="second">Second</option>
+                    <option value="other">...</option>
+                </Select>
+            )
         })
 }
  
