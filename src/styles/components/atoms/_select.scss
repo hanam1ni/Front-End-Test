@@ -1,0 +1,32 @@
+@mixin hide-default-arrow {
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+}
+
+@mixin custom-arrow($size, $color) {
+    position: absolute;
+    top: 50%;
+    right: 13.72px;
+    width: 0; 
+    height: 0; 
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+}
+
+.select-container {
+    position: relative;
+    .select-default {
+        @include hide-default-arrow;
+        padding: 9.5px 14px 8.5px 12px;
+        height: auto;
+        text-align: left;
+        font-size: $fontSize-ExtraSmall;
+        color: #8899AA;              
+    }
+    
+    .select-arrow {
+        @include custom-arrow(5px, #C9C9C9)
+    }
+}
