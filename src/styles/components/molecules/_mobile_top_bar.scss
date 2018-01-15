@@ -1,0 +1,28 @@
+.mobile-top-bar-container {
+    position: relative;
+    width: 100%;
+    padding: 7.5px 30px 8.5px 30px;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-align: center;
+    line-height: 34px;
+    background-color: #702283;
+
+    .back-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        left: 10px;
+        height: 17px;
+        width: 19px;
+    }
+
+    .magnify-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        height: 17px;
+        width: 17px;   
+    }
+}
