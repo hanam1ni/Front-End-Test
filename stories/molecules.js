@@ -11,6 +11,7 @@ import AddProductInput from 'molecules/AddProductInput.js'
 import OrderSummary from 'molecules/OrderSummary.js'
 import ProductTable from 'molecules/ProductTable.js'
 import SideMenu from 'molecules/SideMenu.js'
+import MobileTopBar from 'molecules/MobileTopBar.js'
 
 export default () => {
     const stories = storiesOf('Molecules', module);
@@ -105,6 +106,9 @@ export default () => {
             return <div style={{width: '246px'}}>
                 <SideMenu />
             </div>
+        })
+        .add('Mobile Top Bar', () => {
+            return <MobileTopBar />
         })
 }
  
