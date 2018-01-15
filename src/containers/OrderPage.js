@@ -7,7 +7,7 @@ export default class OrderPage extends Component {
         return (
             <div className="order-page-container">
                 <div className="side-bar-container">
-                    <Sidebar />
+                    <Sidebar initialActive={1} />
                 </div>
                 <div className="sub-page-container">
                     <EditOrderSubPage />

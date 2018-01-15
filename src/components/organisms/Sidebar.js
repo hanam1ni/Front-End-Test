@@ -11,7 +11,7 @@ export default class Sidebar extends Component {
                     <img src={logo} className="sidebar-logo" />
                 </div>
                 <div className="sidebar-sidemenu-container">
-                    <SideMenu />
+                    <SideMenu itemActive={this.props.initialActive} />
                 </div>
                 <div className="sidebar-footer-container">
                     <div>POWERED BY</div>
