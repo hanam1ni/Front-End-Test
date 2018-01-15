@@ -6,8 +6,12 @@ export default class OrderPage extends Component {
     render() {
         return (
             <div className="order-page-container">
-                <Sidebar />
-                <EditOrderSubPage />
+                <div className="side-bar-container">
+                    <Sidebar />
+                </div>
+                <div className="sub-page-container">
+                    <EditOrderSubPage />
+                </div>
             </div>
         )
     }

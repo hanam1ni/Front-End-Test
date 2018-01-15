@@ -3,4 +3,8 @@
     grid-template-columns: auto auto;
     grid-template-rows: 100vh;
     background-color: #F4F7F8;
+
+    .sub-page-container {
+        overflow-y: auto;
+    }
 }

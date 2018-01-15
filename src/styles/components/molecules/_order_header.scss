@@ -1,6 +1,6 @@
 .order-header-container {
     display: grid;
-    grid-template-columns: 3fr 60px 60px 60px;
+    grid-template-columns: minmax(80px, 3fr) repeat(auto-fit, minmax(60px, 0.5fr));
     grid-auto-rows: min-content;
     grid-column-gap: 10px;
     background: $colorWhite;

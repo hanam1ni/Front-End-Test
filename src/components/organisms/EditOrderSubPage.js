@@ -25,6 +25,10 @@ export default class EditOrderPage extends Component {
                 {
                     value: 'tomHank',
                     title: 'Tom Hank'
+                },
+                {
+                    value: 'bradPitt',
+                    title: 'Brad Pitt'
                 }
             ],
             status: [
