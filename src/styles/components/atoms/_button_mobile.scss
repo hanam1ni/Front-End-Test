@@ -1,6 +1,8 @@
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 768px) {
     @mixin button($buttonColor, $labelColor) {
-        padding: 13px 20px;
+        text-align: center;
+        padding-top: 13px;
+        padding-bottom: 13px;
         font-size: $fontSize-Regular;
         @include font-weight('regular');
         line-height: 17px;
@@ -21,7 +23,7 @@
 
     .button-default {
         @include button($buttonColor-Default, $buttonLabel-Default);
-        border-radius: 5px;
+        border-radius: 2px;
         box-shadow: 0 2px 0 0 rgba(0,0,0,0.08);
     }
 
