@@ -5,6 +5,7 @@ import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
 
 import Sidebar from 'organisms/Sidebar.js'
 import EditOrderSubPage from 'organisms/EditOrderSubPage.js'
+import EditOrderSubPageMobile from 'organisms/EditOrderSubPageMobile.js'
 
 export default () => {
     const stories = storiesOf('Organisms', module);
@@ -15,7 +16,10 @@ export default () => {
                 <Sidebar />
             </div>
         })
-        .add('Edit Order Sub Page', () => {
+        .add('Edit Order Subpage', () => {
             return <EditOrderSubPage />
+        })
+        .add('Edit Order Subpage Mobile', () => {
+            return <EditOrderSubPageMobile />
         })
 }
