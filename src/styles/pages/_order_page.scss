@@ -1,7 +1,6 @@
 .order-page-container {
     display: grid;
-    min-height: 100%;
     grid-template-columns: auto auto;
-    grid-template-rows: 1fr;
+    grid-template-rows: 100vh;
     background-color: #F4F7F8;
 }

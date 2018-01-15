@@ -11,16 +11,12 @@
 
     .edit-order-header {
         display: grid;
-        grid-template-columns: 10fr 3fr;
+        grid-template-columns: 10fr minmax(200px, auto);
         grid-column-gap: 20px;
-
-        .edit-order-order-header {
-
-        }
 
         .edit-order-header-button {
             align-self: center;
-            justify-self: end;
+            justify-self: end;  
             
             .back-link {
                 color: $colorGrey-Dark;

@@ -78,7 +78,7 @@ export default class EditOrderPage extends Component {
                     </div>
                     <div className="edit-order-header-button">
                         <a className="back-link">Back</a>
-                        <Button styleClass="update-button" >Update Order</Button>
+                        <Button styleClass="update-button">Update Order</Button>
                     </div>
                 </div>
                 <div className="edit-order-add-product">
