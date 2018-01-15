@@ -3,17 +3,25 @@ import PropTypes from 'prop-types';
 import { isNil } from 'lodash'
 import { Table } from 'react-bootstrap'
 import Select from 'atoms/Select.js'
-export default class ProductTable extends Component {
+import Responsive from 'react-responsive'
 
+export default class ProductTable extends Component {
     render() {
+        const Desktop = (props) => (<Responsive {...props} minWidth={769} />)
+        const Mobile = (props) => (<Responsive {...props} maxWidth={768} />)
         const { tableData } = this.props
         const TableHeader = () => {
             return [
                 <th className="table-header">
-                    <Select styleClass="table-select">
-                        <option value="sku">SKU</option>
-                        <option value="brand">BRAND</option>
-                    </Select>
+                    <Desktop>
+                        <Select styleClass="table-select">
+                            <option value="sku">SKU</option>
+                            <option value="brand">BRAND</option>
+                        </Select>
+                    </Desktop>
+                    <Mobile>
+                        SKU
+                    </Mobile>
                 </th>,
                 <th className="table-header">DESCRIPTION</th>,
                 <th className="table-header">BRAND</th>,
@@ -55,7 +63,7 @@ export default class ProductTable extends Component {
             })
         }
 
-        return <Table condensed className="product-table">
+        return <Table condensed className="product-table" responsive>
             <thead>
                 <tr>
                     <TableHeader />
