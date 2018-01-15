@@ -108,7 +108,8 @@ export default () => {
             </div>
         })
         .add('Mobile Top Bar', () => {
-            return <MobileTopBar />
+            const title = text("Title", "Edit ORD07070707 ")
+            return <MobileTopBar title={title} />
         })
 }
  
