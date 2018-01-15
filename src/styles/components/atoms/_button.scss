@@ -1,4 +1,4 @@
-@media screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     @mixin button($buttonColor, $labelColor) {
         padding: 13px 20px;
         font-size: $fontSize-Regular;

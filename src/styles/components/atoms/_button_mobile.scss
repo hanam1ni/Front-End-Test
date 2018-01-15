@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     @mixin button($buttonColor, $labelColor) {
         text-align: center;
         padding-top: 13px;
