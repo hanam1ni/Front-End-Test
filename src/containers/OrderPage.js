@@ -5,8 +5,8 @@ import Responsive from 'react-responsive'
 
 export default class OrderPage extends Component {
     render() {
-        const Desktop = (props) => (<Responsive {...props} minWidth={768} />)
-        const Mobile = (props) => (<Responsive {...props} maxWidth={767} />)
+        const Desktop = (props) => (<Responsive {...props} minWidth={769} />)
+        const Mobile = (props) => (<Responsive {...props} maxWidth={768} />)
         return (
             <div>
                 <Desktop>
