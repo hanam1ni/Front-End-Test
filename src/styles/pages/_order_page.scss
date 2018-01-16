@@ -1,9 +1,11 @@
-.order-page-container {
-    display: flex;
-    height: 100%;
-    background-color: #F4F7F8;
-    
-    .sub-page-container {
-        overflow-y: auto;
+@media only screen and (min-width: 1024px) {
+    .order-page-container {
+        display: flex;
+        height: 100%;
+        background-color: #F4F7F8;
+        
+        .sub-page-container {
+            overflow-y: auto;
+        }
     }
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Button from 'atoms/Button.js'
 import Select from 'atoms/Select.js'
-import MobileTopBar from 'molecules/MobileTopBar.js'
 import OrderSummary from 'molecules/OrderSummary.js'
 import AddProductInput from 'molecules/AddProductInput.js'
 import ProductTable from 'molecules/ProductTable.js'
@@ -11,7 +10,6 @@ export default class EditOrderSubPageMobile extends Component {
     render() {
         return (
             <div className="edit-order-page-container">
-                <MobileTopBar title="Edit ORD07070707"/>
                 <div className="edit-order-header">
                     <div className="edit-order-header-detail">
                         <h1>CPF Saraburi</h1>
