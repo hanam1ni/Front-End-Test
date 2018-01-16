@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import Button from 'atoms/Button.js'
 import Select from 'atoms/Select.js'
 import MobileTopBar from 'molecules/MobileTopBar.js'
-
+import OrderSummary from 'molecules/OrderSummary.js'
+import mockData from '../../store/orderPageData.json'
 export default class EditOrderSubPageMobile extends Component {
     render() {
         return (
@@ -24,7 +25,10 @@ export default class EditOrderSubPageMobile extends Component {
                             <option value="pending">Pending</option>
                         </Select>
                     </div>
-                    <div className="line-separator" />
+                </div>
+                <div className="separator" />
+                <div className="edit-order-summary">
+                    <OrderSummary summaryData={mockData.summaryData} />
                 </div>
             </div>
         )

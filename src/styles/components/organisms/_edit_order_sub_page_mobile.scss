@@ -37,12 +37,15 @@
                     margin-bottom: 9px;
                 }
             }
+        }
+        .edit-order-summary {
+            margin-top: 20px;
+        }
 
-            .line-separator {
-                height: 2px;
-                border: 1px solid #979797;
-                border-top: none;
-            }
+        .separator {
+            height: 2px;
+            border: 1px solid #979797;
+            border-top: none;
         }
     }
 }
