@@ -4,11 +4,7 @@ import Input from 'atoms/Input.js';
 export default class OrderSummary extends Component {
     render () {
         const { deliveryDate, subTotal, shipping, discount, tax: { percent:taxPercent, value:taxValue }, total } = this.props.summaryData
-
-        const valueWithCommas = (value) => {
-            return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        }
-
+        
         return <div className="order-summary-container">
             <div className="order-summary-header">
                 Estimated Delivery Date 
@@ -16,7 +12,7 @@ export default class OrderSummary extends Component {
             <div className="order-summary-data">
                 <Input value={deliveryDate} />
             </div>
-            <div class="line-separator"></div>
+            <div class="line-separator" />
             <div className="order-summary-header">
                 Sub-total
             </div>
@@ -49,7 +45,7 @@ export default class OrderSummary extends Component {
                     <span>{taxValue.toFixed(2).toLocaleString()}</span>
                 </div>
             </div>
-            <div class="line-separator"></div>
+            <div class="line-separator" />
             <div className="order-summary-total">
                 <div class="order-total-header">
                     Total

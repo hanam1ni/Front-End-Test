@@ -1,0 +1,51 @@
+@media only screen and (max-width: 768px) {
+    .edit-order-page-container {
+        display: flex;
+        flex-direction: column;
+        background-color: #F4F7F8;
+        .edit-order-header {
+            width: 100%;
+            
+            .edit-order-header-detail {
+                text-align: center;
+                padding-top: 16px;
+                padding-bottom: 13px;
+                box-shadow: 0 -1px 3px 0 rgba(0,0,0,0.11), 0 2px 3px 0 rgba(98,98,114,0.21);
+                background-color: #FFFFFF;
+                h1 {
+                    margin: 0;
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: #626272;
+                }
+
+                span {
+                    font-size: 14px;
+                    color: #8899AA;
+                }
+            }
+
+            .edit-order-header-select {
+                margin-top: 25px;
+                margin-bottom: 28px;
+                padding-left: 10px;
+                padding-right: 10px;
+                line-height: 16px;
+                
+                .order-header-title {
+                    margin-top: 16px;
+                    margin-bottom: 9px;
+                }
+            }
+        }
+        .edit-order-summary {
+            margin-top: 20px;
+        }
+
+        .separator {
+            height: 2px;
+            border: 1px solid #979797;
+            border-top: none;
+        }
+    }
+}

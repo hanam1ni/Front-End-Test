@@ -1,39 +1,41 @@
-.edit-order-page-container {
-    display: grid;
-    padding: 100px 70px 310px 35px;
-    grid-template-columns: auto;
-    
-    grid-row-gap: 15px;
-    .edit-order-breadcrumb {
-        margin-bottom: 25px;
-    }
-
-    .edit-order-header {
+@media only screen and (min-width: 1024px) {
+    .edit-order-page-container {
         display: grid;
-        grid-template-columns: 10fr minmax(200px, auto);
-        grid-column-gap: 20px;
+        padding: 100px 70px 310px 35px;
+        grid-template-columns: auto;
+        
+        grid-row-gap: 15px;
+        .edit-order-breadcrumb {
+            margin-bottom: 25px;
+        }
 
-        .edit-order-header-button {
-            align-self: center;
-            justify-self: end;  
-            
-            .back-link {
-                color: $colorGrey-Dark;
-                font-size: $fontSize-Regular;
-                line-height: 17px;
-                cursor: pointer;
-            }
+        .edit-order-header {
+            display: grid;
+            grid-template-columns: 10fr minmax(200px, auto);
+            grid-column-gap: 20px;
 
-            .update-button {
-                margin-left: 35px;
+            .edit-order-header-button {
+                align-self: center;
+                justify-self: end;  
+                
+                .back-link {
+                    color: $colorGrey-Dark;
+                    font-size: $fontSize-Regular;
+                    line-height: 17px;
+                    cursor: pointer;
+                }
+
+                .update-button {
+                    margin-left: 35px;
+                }
             }
         }
-    }
 
-    .edit-order-summary {
-        position: fixed;
-        bottom: 18px;
-        right: 73px;
-        z-index: 10;
+        .edit-order-summary {
+            position: fixed;
+            bottom: 18px;
+            right: 73px;
+            z-index: 10;
+        }
     }
 }
