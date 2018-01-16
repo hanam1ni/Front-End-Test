@@ -3,7 +3,10 @@ import Button from 'atoms/Button.js'
 import Select from 'atoms/Select.js'
 import MobileTopBar from 'molecules/MobileTopBar.js'
 import OrderSummary from 'molecules/OrderSummary.js'
+import AddProductInput from 'molecules/AddProductInput.js'
+import ProductTable from 'molecules/ProductTable.js'
 import mockData from '../../store/orderPageData.json'
+import logo from 'statics/icons/logo-white.svg';
 export default class EditOrderSubPageMobile extends Component {
     render() {
         return (
@@ -29,6 +32,21 @@ export default class EditOrderSubPageMobile extends Component {
                 <div className="separator" />
                 <div className="edit-order-summary">
                     <OrderSummary summaryData={mockData.summaryData} />
+                </div>
+                <div className="separator" />
+                <div className="edit-order-add-product">
+                    <AddProductInput placeholder="Add Products" />
+                </div>
+                <div className="edit-order-remark">
+                    <span>Remark</span>
+                    <p>When you enter into any new area of science, you almost always find yourself with a baffling new language of technical terms to learn before you can converse with the experts. </p>
+                </div>
+                <div className="edit-order-table">
+                    <ProductTable tableData={mockData.tableData} />
+                </div>
+                <div className="sidebar-footer-container">
+                    <div>POWERED BY</div>
+                    <img src={logo} className="sidebar-footer-logo" />
                 </div>
             </div>
         )
