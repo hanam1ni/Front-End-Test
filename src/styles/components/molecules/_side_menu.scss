@@ -1,9 +1,10 @@
 @mixin side-menu-item($isActive) {
     display: grid;
-    grid-template-columns: minmax(auto, 70px) 1fr;
+    grid-template-columns: auto 1fr;
     grid-template-rows: minmax(50px, 67px);
     grid-auto-rows: 30px;
     position: relative;
+    padding-left: 35px;
     cursor: pointer;
 
     @if $isActive {
@@ -18,15 +19,22 @@
             top: 50%;
             transform: translateY(-50%);
             left: 0;
-            background-color: $colorGreen;
+            @media only screen and (max-width: 768px) {
+                background-color: #FFCC00;
+            }
+            @media only screen and (min-width: 1024px) {
+                background-color: $colorGreen;
+            }
         }
     }
     @else {
         background-color: $colorPurple-Light;
         color: $colorPink;
     }
+    
     .side-menu-icon {
         align-self: center;
+        padding-right: 20px;
         .item-icon {
             width: 17px;
             height: auto;

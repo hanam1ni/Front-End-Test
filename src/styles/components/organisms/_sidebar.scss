@@ -1,36 +1,38 @@
-.sidebar-container {
-    display: inline-grid;
-    grid-template-columns: 250px;
-    grid-template-rows: min-content auto min-content;
-    height: 100%;
-    background-color: $colorPurple-Light;
-    
-    .sidebar-logo-container {
-        padding: 10px 0;
-        background-color: $colorPurple-Dark;
+@media only screen and (min-width: 1024px) {
+    .sidebar-container {
+        display: inline-grid;
+        grid-template-columns: 250px;
+        grid-template-rows: min-content auto min-content;
+        height: 100%;
+        background-color: $colorPurple-Light;
+        
+        .sidebar-logo-container {
+            padding: 10px 0;
+            background-color: $colorPurple-Dark;
 
-        .sidebar-logo {
-            display: block;
-            margin: 0 auto;
-            width: 158px;
-            height: 50px;
+            .sidebar-logo {
+                display: block;
+                margin: 0 auto;
+                width: 158px;
+                height: 50px;
+            }
         }
-    }
-    .sidebar-sidemenu-container {
-        overflow-y: auto; 
-    }
+        .sidebar-sidemenu-container {
+            overflow-y: auto; 
+        }
 
-    .sidebar-footer-container {
-        align-self: end;
-        padding-bottom: 22px;
-        text-align: center;
-        letter-spacing: 1px;
-        font-size: $fontSize-ExtraSmall;
-        color: $colorPink;
+        .sidebar-footer-container {
+            align-self: end;
+            padding-bottom: 22px;
+            text-align: center;
+            letter-spacing: 1px;
+            font-size: $fontSize-ExtraSmall;
+            color: $colorPink;
 
-        .sidebar-footer-logo {
-            height: 36px;
-            width: 113px;
+            .sidebar-footer-logo {
+                height: 36px;
+                width: 113px;
+            }
         }
     }
 }

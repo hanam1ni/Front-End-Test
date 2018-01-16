@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import SideMenu from 'molecules/SideMenu.js';
-
+import PropTypes from 'prop-types'; 
 import logo from 'statics/icons/logo-white.svg';
 
 export default class Sidebar extends Component {
     render() {
+        const { isLogin } = this.props
         return (
-            <div className="sidebar-container">
+            <div className={sidebarClass}>
                 <div className="sidebar-logo-container">
                     <img src={logo} className="sidebar-logo" />
                 </div>
+                { isLogin && 
+                    <div className="sidebar-user">
+                        <div className="user-name">Hello, {userName}</div>
+                        <div className="user-company">{userCompany}</div>
+                    </div>
+                }
                 <div className="sidebar-sidemenu-container">
-                    <SideMenu itemActive={this.props.initialActive} />
+                    <SideMenu itemActive={initialActive} isLogin={isLogin} />
                 </div>
                 <div className="sidebar-footer-container">
                     <div>POWERED BY</div>
@@ -20,4 +27,18 @@ export default class Sidebar extends Component {
             </div>
         )
     }
+}
+
+Sidebar.propTypes = {
+    isLogin: PropTypes.bool,
+    userName: PropTypes.string,
+    userCompany: PropTypes.string,
+    initialActive: PropTypes.number
+}
+
+Sidebar.defaultProps = {
+    isLogin: false,
+    userName: '',
+    userCompany: '',
+    initialActive: null
 }
