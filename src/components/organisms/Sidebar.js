@@ -5,9 +5,9 @@ import logo from 'statics/icons/logo-white.svg';
 
 export default class Sidebar extends Component {
     render() {
-        const { isLogin } = this.props
+        const { isLogin, initialActive, userName, userCompany } = this.props
         return (
-            <div className={sidebarClass}>
+            <div className="sidebar-container">
                 <div className="sidebar-logo-container">
                     <img src={logo} className="sidebar-logo" />
                 </div>
