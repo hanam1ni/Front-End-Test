@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { isNil } from 'lodash'
 import { Table, Panel } from 'react-bootstrap'
 import Select from 'atoms/Select.js'
-import Responsive from 'react-responsive'
+import MediaQuery from 'react-responsive'
 
 export default class ProductTable extends Component {
     render() {
-        const Desktop = (props) => (<Responsive {...props} minWidth={769} />)
-        const Mobile = (props) => (<Responsive {...props} maxWidth={768} />)
+        const Desktop = (props) => (<MediaQuery  {...props} minDeviceWidth={769} />)
+        const Mobile = (props) => (<MediaQuery  {...props} maxDeviceWidth={768} />)
         const { tableData } = this.props
         const TableHeader = () => {
             return [
