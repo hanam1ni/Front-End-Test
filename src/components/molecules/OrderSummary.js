@@ -38,19 +38,16 @@ export default class OrderSummary extends Component {
                 <div className="order-summary-data order-summary-tax-percent">
                     <Input value={taxPercent} className="input-tax" />
                 </div>
-                <div>
-                    <span>%</span>
-                </div>
                 <div className="order-summary-data order-summary-tax-value">
-                    <span>{taxValue.toFixed(2).toLocaleString()}</span>
+                    <span> % {taxValue.toFixed(2).toLocaleString()}</span>
                 </div>
             </div>
             <div class="line-separator" />
             <div className="order-summary-total">
-                <div class="order-total-header">
+                <div class="order-summary-header order-total-header">
                     Total
                 </div>
-                <div class="order-total-data">
+                <div class="order-summary-data order-total-data">
                     THB {total.toLocaleString()}
                 </div>
             </div>

@@ -3,6 +3,7 @@
         appearance:none;
         -moz-appearance:none; /* Firefox */
         -webkit-appearance:none; /* Safari and Chrome */
+        
     }
 
     @mixin custom-arrow($size, $color) {
@@ -18,6 +19,10 @@
 
     .select-container {
         position: relative;
+        /* Hide Arrow for IE */
+        select::-ms-expand {
+            display: none;
+        }
         .select-default {
             @include hide-default-arrow;
             padding: 9.5px 14px 8.5px 12px;

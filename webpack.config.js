@@ -1,6 +1,9 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const autoprefixer = require('autoprefixer')
+const webpack = require('webpack')
 
 module.exports = {
   entry: './index.js',
@@ -20,8 +23,11 @@ module.exports = {
         use: "html-loader"
       },
       {
-        test:/\.(s*)css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        test: /\.(s*)css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: ["css-loader", "postcss-loader", "sass-loader"]
+        })
       },
       { 
         test: /\.png$/, 
@@ -63,5 +69,11 @@ module.exports = {
         to:'icons'
       } 
     ]),
+    new ExtractTextPlugin("styles.css"),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+          postcss: [autoprefixer]
+      }
+    })
   ]
 };
