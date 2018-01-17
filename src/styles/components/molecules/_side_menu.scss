@@ -1,8 +1,6 @@
 @mixin side-menu-item($isActive) {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: minmax(50px, 67px);
-    grid-auto-rows: 30px;
+    display: flex;
+    height: 67px;
     position: relative;
     padding-left: 35px;
     cursor: pointer;

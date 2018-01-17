@@ -1,8 +1,5 @@
 .order-header-container {
-    display: grid;
-    grid-template-columns: minmax(80px, 3fr) repeat(auto-fit, minmax(60px, 0.5fr));
-    grid-auto-rows: min-content;
-    grid-column-gap: 10px;
+    display: flex;
     background: $colorWhite;
     border: 1px solid rgba(173,179,185,0.51);
     border-radius: 3px;
@@ -11,7 +8,7 @@
     padding: 12px 20px 12px 15px;
 
     .order-header-detail {
-        align-self: end;
+        flex: 3 auto;
         h2 {
             margin: 0;
             font-size: $fontSize-Large;
@@ -27,7 +24,9 @@
     }
     
     .order-header-select {
-        align-self: center;
+        flex: auto;
+        max-width: 120px;
+        margin-left: 20px;
         text-align: center;
         font-size: $fontSize-ExtraSmall;
         color: $colorGrey-Dark;
