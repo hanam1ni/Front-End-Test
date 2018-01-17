@@ -42,7 +42,7 @@ export default class OrderSummary extends Component {
                     <span>%</span>
                 </div>
                 <div className="order-summary-data order-summary-tax-value">
-                    <span>{taxValue.toFixed(2).toLocaleString()}</span>
+                    <span> % {taxValue.toFixed(2)}</span>
                 </div>
             </div>
             <div class="line-separator" />
