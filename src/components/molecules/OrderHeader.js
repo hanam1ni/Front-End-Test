@@ -12,22 +12,22 @@ export default class OrderHeader extends Component {
                     <p>{detail.address}</p>
                     <p>{detail.tel}</p>
                 </div>
-                <div class="order-header-select">
+                <div className="order-header-select">
                     <span className="header-title">Type</span>
-                    <Select defaultOption={selection.type}>
-                    { selection.type.map((type) => <option value={type.value}>{type.title}</option>) }
+                    <Select>
+                    { selection.type.map((type) => <option value={type.value} key={type.value}>{type.title}</option>) }
                     </Select>
                 </div>
-                <div class="order-header-select">
+                <div className="order-header-select">
                     <span className="header-title">Owned By</span>
-                    <Select defaultOption={selection.owner}>
-                    { selection.owner.map((owner) => <option value={owner.value}>{owner.title}</option>) }
+                    <Select>
+                    { selection.owner.map((owner) => <option value={owner.value} key={owner.value}>{owner.title}</option>) }
                     </Select>
                 </div>
-                <div class="order-header-select">
+                <div className="order-header-select">
                     <span className="header-title">Status</span>
-                    <Select defaultOption={selection.status}>
-                    { selection.status.map((status) => <option value={status.value}>{status.title}</option>) }
+                    <Select>
+                    { selection.status.map((status) => <option value={status.value} key={status.value}>{status.title}</option>) }
                     </Select>
                 </div>
             </div>

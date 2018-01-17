@@ -11,6 +11,18 @@ export default class AddProductInput extends Component {
         };
     }
 
+    handleOnChange() {
+        setTimeout(() => {
+            console.log("Hello")
+        }, 500);
+    }
+
+    handleToggleFocus() {
+        this.setState({
+            formFocus: !(this.state.formFocus)
+        })
+    }
+
     render () {
         const { formFocus } = this.state
         const { stretch, placeholder } = this.props
@@ -18,15 +30,16 @@ export default class AddProductInput extends Component {
             "add-product-input",
             stretch ? "add-product-input-stretch" : null
         ].join(' ')
-        const toggleFocus = () => {
-            this.setState({
-                formFocus: !(this.state.formFocus)
-            })
-        }
         return (
             <InputGroup className={InputGroupClass}>
                 <img role="img" src={addIcon} className={formFocus ? "add-icon active" : "add-icon"} />
-                <FormControl type="text" placeholder={placeholder} onFocus={() => toggleFocus()} onBlur={() => toggleFocus()}/>
+                <FormControl 
+                    type="text"
+                    placeholder={placeholder} 
+                    onChange={() => this.handleOnChange()}
+                    onFocus={() => this.handleToggleFocus()}
+                    onBlur={() => this.handleToggleFocus()}
+                />
             </InputGroup>
         )
     }

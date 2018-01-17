@@ -7,7 +7,8 @@ import ProductTable from 'molecules/ProductTable.js'
 import Textbox from 'molecules/Textbox.js'
 import OrderSummary from 'molecules/OrderSummary.js'
 import mockData from '../../store/orderPageData.json'
-export default class EditOrderPage extends Component {
+
+export default class EditOrderSubPage extends Component {
     render() {
         return (
             <div className="edit-order-page-container">
@@ -20,7 +21,7 @@ export default class EditOrderPage extends Component {
                     </div>
                     <div className="edit-order-header-button">
                         <a className="back-link">Back</a>
-                        <Button styleClass="update-button">Update Order</Button>
+                        <Button styleclass="update-button">Update Order</Button>
                     </div>
                 </div>
                 <div className="edit-order-add-product">

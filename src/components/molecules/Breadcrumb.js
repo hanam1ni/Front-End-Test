@@ -6,7 +6,7 @@ export default class Breadcrumb extends Component {
         const { levels } = this.props
         return <div className="breadcrumb-container">
             {levels.map((levelName) => (
-                <span>
+                <span key={levelName}>
                     {levelName}
                 </span>
             ))}

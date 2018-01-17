@@ -10,9 +10,9 @@ export default class OrderSummary extends Component {
                 Estimated Delivery Date 
             </div>
             <div className="order-summary-data">
-                <Input value={deliveryDate} />
+                <Input defaultValue={deliveryDate} />
             </div>
-            <div class="line-separator" />
+            <div className="line-separator" />
             <div className="order-summary-header">
                 Sub-total
             </div>
@@ -23,31 +23,31 @@ export default class OrderSummary extends Component {
                 Shipping
             </div>
             <div className="order-summary-data">
-                <Input value={shipping.toLocaleString()} />
+                <Input defaultValue={shipping.toLocaleString()} />
             </div>
             <div className="order-summary-header">
                 Special Discount
             </div>
             <div className="order-summary-data">
-                <Input value={discount} />
+                <Input defaultValue={discount} />
             </div>
             <div className="order-summary-header">
                 Tax
             </div>
             <div className="order-summary-tax">
                 <div className="order-summary-data order-summary-tax-percent">
-                    <Input value={taxPercent} className="input-tax" />
+                    <Input defaultValue={taxPercent} className="input-tax" />
                 </div>
                 <div className="order-summary-data order-summary-tax-value">
                     <span> % {taxValue.toFixed(2)}</span>
                 </div>
             </div>
-            <div class="line-separator" />
+            <div className="line-separator" />
             <div className="order-summary-total">
-                <div class="order-summary-header order-total-header">
+                <div className="order-summary-header order-total-header">
                     Total
                 </div>
-                <div class="order-summary-data order-total-data">
+                <div className="order-summary-data order-total-data">
                     THB {total.toLocaleString()}
                 </div>
             </div>

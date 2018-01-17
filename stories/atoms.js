@@ -21,8 +21,7 @@ export default () => {
     stories
         .add('Button', () => {
             const label = text('Label', 'Hello Button')
-            const secondary = boolean('Secondary', false)
-            return <Button secondary={secondary}>{label}</Button>
+            return <Button>{label}</Button>
         })
         .add('Dropdown Button', () => {
             const label = text('Title', 'Default')

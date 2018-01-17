@@ -12,9 +12,9 @@ export default class ProductTable extends Component {
         const { tableData } = this.props
         const TableHeader = () => {
             return [
-                <th className="table-header">
+                <th className="table-header" key="header-sku">
                     <Desktop>
-                        <Select styleClass="table-select">
+                        <Select styleclass="table-select">
                             <option value="sku">SKU</option>
                             <option value="brand">BRAND</option>
                         </Select>
@@ -23,14 +23,14 @@ export default class ProductTable extends Component {
                         SKU
                     </Mobile>
                 </th>,
-                <th className="table-header">DESCRIPTION</th>,
-                <th className="table-header">BRAND</th>,
-                <th className="table-header">LIST PRICE</th>,
-                <th className="table-header">DISCOUNT</th>,
-                <th className="table-header">NET PRICE</th>,
-                <th className="table-header">QTY</th>,
-                <th className="table-header">TOTAL</th>,
-                <th className="table-header"> </th>,
+                <th className="table-header" key="header-description" >DESCRIPTION</th>,
+                <th className="table-header" key="header-brand" >BRAND</th>,
+                <th className="table-header" key="header-list-price">LIST PRICE</th>,
+                <th className="table-header" key="header-discount" >DISCOUNT</th>,
+                <th className="table-header" key="header-net-price" >NET PRICE</th>,
+                <th className="table-header" key="header-qty" >QTY</th>,
+                <th className="table-header" key="header-total">TOTAL</th>,
+                <th className="table-header" key="header-last"> </th>,
             ]
         }
 
