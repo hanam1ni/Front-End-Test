@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'; 
 import { isNil } from 'lodash'
-import { Table } from 'react-bootstrap'
+import { Table, Panel } from 'react-bootstrap'
 import Select from 'atoms/Select.js'
 import Responsive from 'react-responsive'
 
@@ -63,16 +63,20 @@ export default class ProductTable extends Component {
             })
         }
 
-        return <Table condensed className="product-table" responsive>
-            <thead>
-                <tr>
-                    <TableHeader />
-                </tr>
-            </thead>
-            <tbody>
-                <TableContent />
-            </tbody>
-        </Table>
+        return (
+            <Panel className="table-border">
+                <Table condensed className="product-table" responsive>
+                    <thead>
+                        <tr>
+                            <TableHeader />
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <TableContent />
+                    </tbody>
+                </Table>
+            </Panel>
+        )
     }
 }
 

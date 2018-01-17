@@ -3,11 +3,13 @@ import SideMenu from 'molecules/SideMenu.js';
 import PropTypes from 'prop-types'; 
 import logo from 'statics/icons/logo-white.svg';
 
-export default class Sidebar extends Component {
+export default class NavigationMobile extends Component {
     render() {
-        const { isLogin, initialActive, userName, userCompany } = this.props
-        return (
-            <div className="sidebar-container">
+        const { isActive, userName, userCompany, isLogin, initialActive, maskOnClick } = this.props
+        const sidebarClass = isActive ? "sidebar-container active" : "sidebar-container"
+        return [
+            (isActive ? <div className="sidebar-mask" onClick={() => maskOnClick()} /> : null),
+            <div className={sidebarClass}>
                 <div className="sidebar-logo-container">
                     <img src={logo} className="sidebar-logo" />
                 </div>
@@ -25,18 +27,18 @@ export default class Sidebar extends Component {
                     <img src={logo} className="sidebar-footer-logo" />
                 </div>
             </div>
-        )
+        ]
     }
 }
 
-Sidebar.propTypes = {
+NavigationMobile.propTypes = {
     isLogin: PropTypes.bool,
     userName: PropTypes.string,
     userCompany: PropTypes.string,
     initialActive: PropTypes.number
 }
 
-Sidebar.defaultProps = {
+NavigationMobile.defaultProps = {
     isLogin: false,
     userName: '',
     userCompany: '',
