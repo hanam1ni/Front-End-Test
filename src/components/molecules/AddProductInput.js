@@ -32,7 +32,7 @@ export default class AddProductInput extends Component {
     }
 
     render () {
-        const { formFocus } = this.state
+        const { formFocus, formOnChange } = this.state
         const { stretch, placeholder } = this.props
         const InputGroupClass = [
             "add-product-input",
@@ -40,7 +40,10 @@ export default class AddProductInput extends Component {
         ].join(' ')
         return (
             <InputGroup className={InputGroupClass}>
-                <img role="img" src={addIcon} className={formFocus ? "add-icon active" : "add-icon"} />
+                { formOnChange ? 
+                    <div class="loader" /> :
+                    <img role="img" src={addIcon} className={formFocus ? "add-icon active" : "add-icon"} />
+                }
                 <FormControl 
                     type="text"
                     placeholder={placeholder} 
