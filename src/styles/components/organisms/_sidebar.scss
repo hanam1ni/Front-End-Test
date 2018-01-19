@@ -17,6 +17,23 @@
                 height: 50px;
             }
         }
+
+        .sidebar-user {
+            padding: 5px 0 5px 21px;
+            background-color: #FFFFFF;
+            .user-name {
+                font-size: 14px;
+                line-height: 17px;
+                color: #DF542A;
+                margin-bottom: 2px;
+            }
+            .user-company {
+                font-size: 11px;
+                line-height: 13px;
+                color: #626272;
+                text-transform: uppercase;
+            }
+        }
         
         .sidebar-sidemenu-container {
             flex: 1 auto;

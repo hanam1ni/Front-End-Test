@@ -13,13 +13,13 @@ export default class NavigationMobile extends Component {
                 <div className="sidebar-logo-container">
                     <img src={logo} className="sidebar-logo" />
                 </div>
-                { isLogin && 
-                    <div className="sidebar-user">
-                        <div className="user-name">Hello, {userName}</div>
-                        <div className="user-company">{userCompany}</div>
-                    </div>
-                }
                 <div className="sidebar-sidemenu-container">
+                    { isLogin && 
+                        <div className="sidebar-user">
+                            <div className="user-name">Hello, {userName}</div>
+                            <div className="user-company">{userCompany}</div>
+                        </div>
+                    }
                     <SideMenu itemActive={initialActive} isLogin={isLogin} />
                 </div>
                 <div className="sidebar-footer-container">

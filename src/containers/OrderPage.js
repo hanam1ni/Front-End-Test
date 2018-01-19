@@ -37,7 +37,14 @@ export default class OrderPage extends Component {
                 </Desktop>
                 <Mobile>
                     <div className="order-page-container">
-                        <NavigationMobile isActive={this.state.mobileNavActive} maskOnClick={this.handleToggleNav.bind(this)} isLogin userName="Somchai" userCompany="Twin Types Coporation"  />
+                        <NavigationMobile 
+                            isLogin
+                            initialActive={0}
+                            isActive={this.state.mobileNavActive} 
+                            maskOnClick={this.handleToggleNav.bind(this)}
+                            userName="Somchai"
+                            userCompany="Twin Types Coporation" 
+                        />
                         <MobileTopBar backOnClick={this.handleToggleNav.bind(this)} title="Edit ORD07070707"/>
                         <div className="sub-page-container">
                             <EditOrderSubPageMobile />
