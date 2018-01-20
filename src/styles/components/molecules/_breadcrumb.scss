@@ -5,7 +5,7 @@
 
 .breadcrumb-container {
     @include breadcrumb-text;
-    span:not(:last-child) {
+    >span:not(:last-child) {
         opacity: 0.2;
 
         &:after {
