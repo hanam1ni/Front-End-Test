@@ -13,22 +13,24 @@ export default class OrderHeader extends Component {
                     <p>{detail.tel}</p>
                 </div>
                 <div className="order-header-select">
-                    <span className="header-title">Type</span>
-                    <Select>
-                    { selection.type.map((type) => <option value={type.value} key={type.value}>{type.title}</option>) }
-                    </Select>
-                </div>
-                <div className="order-header-select">
-                    <span className="header-title">Owned By</span>
-                    <Select>
-                    { selection.owner.map((owner) => <option value={owner.value} key={owner.value}>{owner.title}</option>) }
-                    </Select>
-                </div>
-                <div className="order-header-select">
-                    <span className="header-title">Status</span>
-                    <Select>
-                    { selection.status.map((status) => <option value={status.value} key={status.value}>{status.title}</option>) }
-                    </Select>
+                    <div className="header-select">
+                        <span className="header-title">Type</span>
+                        <Select>
+                        { selection.type.map((type) => <option value={type.value} key={type.value}>{type.title}</option>) }
+                        </Select>
+                    </div>
+                    <div className="header-select">
+                        <span className="header-title">Owned By</span>
+                        <Select>
+                        { selection.owner.map((owner) => <option value={owner.value} key={owner.value}>{owner.title}</option>) }
+                        </Select>
+                    </div>
+                    <div className="header-select">
+                        <span className="header-title">Status</span>
+                        <Select>
+                        { selection.status.map((status) => <option value={status.value} key={status.value}>{status.title}</option>) }
+                        </Select>
+                    </div>
                 </div>
             </div>
         )
