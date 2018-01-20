@@ -10,20 +10,20 @@ export default class EditOrderSubPageMobile extends Component {
     render() {
         return (
             <div className="edit-order-page-container">
-                <div className="edit-order-header">
-                    <div className="edit-order-header-detail">
+                <div className="page-header">
+                    <div className="header-detail">
                         <h1>{mockData.orderHeaderDetail.name}</h1>
                         <span>{mockData.orderHeaderDetail.address}</span>
                     </div>
-                    <div className="edit-order-header-select">
+                    <div className="header-select">
                         <Button>Update Order</Button>
-                        <div className="order-header-title">Created By</div>
+                        <div className="select-title">Created By</div>
                         <Select>
                         { mockData.orderHeaderSelect.owner.map((owner) => (
                             <option value={owner.value}>{owner.title}</option>
                         )) }
                         </Select>
-                        <div className="order-header-title">Status</div>
+                        <div className="select-title">Status</div>
                         <Select>
                         { mockData.orderHeaderSelect.status.map((status) => (
                             <option value={status.value}>{status.title}</option>
@@ -32,23 +32,23 @@ export default class EditOrderSubPageMobile extends Component {
                     </div>
                 </div>
                 <div className="separator" />
-                <div className="edit-order-summary">
+                <div className="page-summary">
                     <OrderSummary summaryData={mockData.summaryData} />
                 </div>
                 <div className="separator" />
-                <div className="edit-order-add-product">
+                <div className="page-add-product">
                     <AddProductInput placeholder="Add Products" stretch />
                 </div>
-                <div className="edit-order-remark">
+                <div className="page-remark">
                     <span>Remark</span>
                     <p>{ mockData.remarkContent }</p>
                 </div>
-                <div className="edit-order-table">
+                <div className="page-table">
                     <ProductTable tableData={mockData.tableData} />
                 </div>
-                <div className="sidebar-footer-container">
+                <div className="footer-container">
                     <div>POWERED BY</div>
-                    <img src={logo} className="sidebar-footer-logo" />
+                    <img src={logo} />
                 </div>
             </div>
         )

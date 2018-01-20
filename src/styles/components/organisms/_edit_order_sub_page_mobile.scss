@@ -1,100 +1,115 @@
-@media only screen and (max-width: 768px) {
-    @mixin text-box { 
-        padding: 16px 20px 13px 12px;
-        background-color: #FFFFFF;
-        border: 1px solid rgba(173,179,185,0.51);
-        border-left: none;
-        border-right: none;
-    }
-    
+@mixin text-box { 
+    padding: 16px 20px 13px 12px;
+    border: 1px solid rgba(173,179,185,0.51);
+    border-left: none;
+    border-right: none;
+
+    background-color: #FFFFFF;
+}
+
+@include breakpoint(mobile) {    
     .edit-order-page-container {
         display: flex;
         flex-direction: column;
+
         background-color: #F4F7F8;
-        .edit-order-header {
+        >.page-header {
             width: 100%;
             
-            .edit-order-header-detail {
+            margin-bottom: 28px;
+            margin-top: 0;
+
+            border: none;
+
+            >.header-detail {
                 @include text-box();
-                text-align: center;
                 box-shadow: 0 -1px 3px 0 rgba(0,0,0,0.11), 0 2px 3px 0 rgba(98,98,114,0.21);
-                h1 {
+                text-align: center;
+                >h1 {
                     margin: 0;
+                    
+                    color: #626272;
+
                     font-size: 24px;
                     line-height: 28px;
-                    color: #626272;
                 }
 
-                span {
+                >span {
                     font-size: 14px;
                     color: #8899AA;
                 }
             }
 
-            .edit-order-header-select {
+            >.header-select {
                 margin-top: 25px;
-                margin-bottom: 28px;
                 padding-left: 10px;
                 padding-right: 10px;
+
                 line-height: 16px;
-                
-                .order-header-title {
+
+                >.select-title {
                     margin-top: 16px;
                     margin-bottom: 9px;
                 }
             }
         }
 
-        .edit-order-summary {
+        >.page-summary {
             margin-top: 20px;
             margin-bottom: 26px;
         }
 
-        .edit-order-add-product {
+        >.page-add-product {
            margin-top: 23px; 
         }
 
-        .edit-order-remark {
+        >.page-remark {
             @include text-box();
             margin-top: 12px;
             
-            span {
-                font-weight: font-weight('bold');
+            >span {
                 color: #626272;
+
+                font-weight: font-weight('bold');
                 font-size: 14px;
                 line-height: 14px;
             }
 
-            p {
+            >p {
                 margin-top: 6px;
+
                 color: #8899AA;
+                
                 font-size: 13px;
                 line-height: 18px;
             }
         }
 
-        .edit-order-table {
+        >.page-table {
             margin-top: 9px;
             padding-left: 10px;
             padding-right: 10px;
         }
 
-        .sidebar-footer-container {
+        >.footer-container {
             width: 100%;
             padding-top: 6px;
             padding-bottom: 9px;
-            text-align: center;
-            letter-spacing: 1px;
-            font-size: 11px;
+
             color: $colorPink;
             background-color: #702283;
-            .sidebar-footer-logo {
+
+            font-size: 11px;
+            text-align: center;
+            letter-spacing: 1px;
+
+            >img {
                 height: 36px;
                 width: 113px;
             }
         }
 
-        .separator {
+        >.separator {
             height: 2px;
             border: 1px solid #979797;
             border-top: none;

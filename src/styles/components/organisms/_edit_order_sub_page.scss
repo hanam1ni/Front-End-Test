@@ -1,45 +1,51 @@
-@media only screen and (min-width: 769px) {
+@include breakpoint(desktop) {
     .edit-order-page-container {
         display: flex;
         flex-direction: column;
+
         padding: 100px 70px 310px 35px;
         
-        .edit-order-breadcrumb {
+        >.page-breadcrumb {
             margin-bottom: 25px;
         }
 
-        .edit-order-header {
+        >.page-header {
             display: flex;
             margin-bottom: 15px;
-            .edit-order-order-header {
+
+            >.page-order-header {
                 flex: 4 auto;
             }
 
-            .edit-order-header-button {
+            >.page-header-button {
                 flex: 1 auto;
                 align-self: center;
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
-                .back-link {
+                
+                >.back-link {
                     margin-left: 10px;
+
                     color: $colorGrey;
+
                     font-size: 14px;
                     line-height: 17px;
+
                     cursor: pointer;
                 }
 
-                .update-button {
+                >.update-button {
                     margin-left: 35px;
                 }
             }
         }
 
-        .edit-order-add-product {
+        >.page-add-product {
             margin-bottom: 15px;
         }
 
-        .edit-order-summary {
+        >.page-summary {
             position: fixed;
             bottom: 18px;
             right: 73px;
