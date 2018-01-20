@@ -37,7 +37,7 @@ export default class EditOrderSubPageMobile extends Component {
                 </div>
                 <div className="separator" />
                 <div className="edit-order-add-product">
-                    <AddProductInput placeholder="Add Products" />
+                    <AddProductInput placeholder="Add Products" stretch />
                 </div>
                 <div className="edit-order-remark">
                     <span>Remark</span>

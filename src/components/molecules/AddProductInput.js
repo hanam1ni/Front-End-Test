@@ -36,13 +36,13 @@ export default class AddProductInput extends Component {
         const { stretch, placeholder } = this.props
         const InputGroupClass = [
             "add-product-input",
-            stretch ? "add-product-input-stretch" : null
+            stretch ? "stretch" : null
         ].join(' ')
         return (
             <InputGroup className={InputGroupClass}>
                 { formOnChange ? 
                     <div class="loader" /> :
-                    <img role="img" src={addIcon} className={formFocus ? "add-icon active" : "add-icon"} />
+                    <img role="img" src={addIcon} className={formFocus ? "active" : " "} />
                 }
                 <FormControl 
                     type="text"
