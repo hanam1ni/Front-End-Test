@@ -65,16 +65,16 @@ export default class SideMenu extends Component {
             const { itemIcon, title, hasChild = false } = item
             const urlIcon = `/icons/${itemIcon}-purple.svg`
             const urlActiveIcon = `/icons/${itemIcon}-white.svg`
-            const itemClass = isActive ? "side-menu-item-active" : "side-menu-item"
+            const itemClass = isActive ? "item-active" : "item"
             return (
                 <div className={itemClass} key={title} onClick={() => {this.handleItemClick(itemKey)}}>
-                    <div className="side-menu-icon">
+                    <div className="item-icon">
                         <div className="active-tab"></div>
-                        <img src={ isActive ? urlActiveIcon : urlIcon } className="item-icon" />
+                        <img src={ isActive ? urlActiveIcon : urlIcon } />
                     </div>
-                    <div className="side-menu-title">
-                        {title}
-                        { hasChild &&  <img src={ isActive ? "/icons/arrow-white.svg" : "/icons/arrow-purple.svg" } className="arrow-icon" /> }
+                    <div className="item-title">
+                        { title }
+                        { hasChild &&  <img src={ isActive ? "/icons/arrow-white.svg" : "/icons/arrow-purple.svg" } /> }
                     </div>
                 </div>
             )
@@ -83,9 +83,10 @@ export default class SideMenu extends Component {
         return <div className="side-menu-container">
             { sideMenuContent.map((item, itemKey) => (MenuItem(item, itemKey))) }
             { this.props.isLogin && 
-            <div className="side-menu-item">
-                <div className="side-menu-title">Log Out</div> 
-            </div>}
+                <div className="item">
+                    <div className="item-title">Log Out</div> 
+                </div>
+            }
         </div>
     }
 }

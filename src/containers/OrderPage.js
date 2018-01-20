@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
+import MediaQuery from 'react-responsive'
 import MobileTopBar from 'molecules/MobileTopBar.js'
-import Sidebar from 'organisms/Sidebar.js'
+import Navigation from 'organisms/Navigation.js'
+import NavigationMobile from 'organisms/NavigationMobile.js'
 import EditOrderSubPage from 'organisms/EditOrderSubPage.js'
 import EditOrderSubPageMobile from 'organisms/EditOrderSubPageMobile.js'
-import NavigationMobile from 'organisms/NavigationMobile.js'
-import MediaQuery from 'react-responsive'
 
 export default class OrderPage extends Component {
     constructor(props) {
@@ -28,7 +28,7 @@ export default class OrderPage extends Component {
                 <Desktop>
                     <div className="order-page-container">
                         <div className="side-bar-container">
-                            <Sidebar initialActive={1} />
+                            <Navigation initialActive={1} />
                         </div>
                         <div className="sub-page-container">
                             <EditOrderSubPage />

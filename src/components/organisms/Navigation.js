@@ -3,7 +3,7 @@ import SideMenu from 'molecules/SideMenu.js';
 import PropTypes from 'prop-types'; 
 import logo from 'statics/icons/logo-white.svg';
 
-export default class Sidebar extends Component {
+export default class Navigation extends Component {
     render() {
         const { isLogin, initialActive, userName, userCompany } = this.props
         return (
@@ -29,14 +29,14 @@ export default class Sidebar extends Component {
     }
 }
 
-Sidebar.propTypes = {
+Navigation.propTypes = {
     isLogin: PropTypes.bool,
     userName: PropTypes.string,
     userCompany: PropTypes.string,
     initialActive: PropTypes.number
 }
 
-Sidebar.defaultProps = {
+Navigation.defaultProps = {
     isLogin: false,
     userName: '',
     userCompany: '',
