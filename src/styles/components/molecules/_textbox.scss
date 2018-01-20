@@ -1,7 +1,7 @@
 .textbox-container {
     .textbox-title {
-        color: $colorGrey-Black;
-        font-size: $fontSize-Small;
+        color: #333333;
+        font-size: 12px;
         line-height: 15px;
         margin-bottom: 3px;
     }
@@ -13,8 +13,8 @@
         border-radius: 3px;
         p {
             margin: 0;
-            font-size: $fontSize-ExtraSmall;
-            color: $colorGrey-Light;
+            font-size: 11px;
+            color: #8899AA;
             line-height: 17px;
         }
     }

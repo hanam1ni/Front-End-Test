@@ -44,7 +44,7 @@
             vertical-align: middle;
             height: 64px;
             color: #64707C;
-            font-size: $fontSize-ExtraSmall;
+            font-size: 11px;
 
             a {
                 color: $colorRed;
@@ -57,7 +57,7 @@
         }
 
         .table-data-sku {
-            font-size: $fontSize-Small;
+            font-size: 12px;
         }
 
         .table-data-qty {
@@ -69,7 +69,7 @@
     
         .table-data-last {
             a {
-                color: $colorGrey-Dark;
+                color: $colorGrey;
             }
         }
         

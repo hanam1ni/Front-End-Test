@@ -9,7 +9,7 @@
         box-shadow: 0 2px 14px 0 rgba(0,0,0,0.12);
         padding: 10px 16px 10px 16px;
         background-color: $colorWhite;
-        color: $colorGrey-Dark;
+        color: $colorGrey;
         
         .line-separator {
             width: 100%;
@@ -23,7 +23,7 @@
             align-items: center;
             flex: 0 65%;
             height: 40px;
-            font-size: $fontSize-ExtraSmall;
+            font-size: 11px;
         }
     
         .order-summary-data {
@@ -36,7 +36,7 @@
         }
         
         .order-summary-sub-total {
-            font-size: $fontSize-Small;
+            font-size: 12px;
         }
 
         .order-summary-tax {
@@ -54,7 +54,7 @@
     
         .order-summary-total {
             display: flex;
-            font-size: $fontSize-Regular;
+            font-size: 14px;
             width: 100%;
             
             .order-total-header {
