@@ -1,3 +1,24 @@
+@mixin summary-header {
+    display: flex;
+    flex: 0 65%;
+    height: 40px;
+    
+    font-size: 11px;
+
+    align-items: center;
+}
+
+@mixin summary-data {
+    display: flex;
+    flex: 0 35%;
+    height: 40px;
+
+    justify-content: flex-end;
+    align-items: center;
+    
+    font-size: 11px;
+}
+
 .order-summary-container {
     display: flex;
     @include breakpoint(desktop) {
@@ -25,57 +46,49 @@
         border-top: none;
     }
 
-    .order-summary-header {
-        display: flex;
-        flex: 0 65%;
-        height: 40px;
-        
-        font-size: 11px;
-
-        align-items: center;
+    >.summary-header {
+       @include summary-header();
     }
 
-    .order-summary-data {
-        display: flex;
-        flex: 0 35%;
-        height: 40px;
-
-        justify-content: flex-end;
-        align-items: center;
-        
-        font-size: 11px;
+    >.summary-data {
+        @include summary-data();
     }
     
-    .order-summary-sub-total {
+    >.summary-sub-total {
+        @include summary-data();
         font-size: 12px;
     }
 
-    .order-summary-tax {
+    >.summary-tax {
         display: flex;
         flex: 0 35%;
         
-        .order-summary-tax-percent{
+        >.summary-tax-percent{
+            @include summary-data();
             width: 28px;
         }
-        .order-summary-tax-value{
+        >.summary-tax-value{
+            @include summary-data();
             flex: 1 auto;
             padding-left: 5px;
         }
     } 
 
-    .order-summary-total {
+    >.summary-total {
         display: flex;
         width: 100%;
 
         font-size: 14px;
         
-        .order-total-header {
+        >.total-header {
+            @include summary-header();
             flex: 1 auto;
         }
 
-        .order-total-data {
+        >.total-data {
+            @include summary-data();
             flex: 2 auto;
-            
+
             font-size: 18px;
             white-space: nowrap;
         }
