@@ -1,37 +1,58 @@
-@media only screen and (min-width: 769px) {
-    @mixin hide-default-arrow {
-        appearance:none;  
+@mixin select() {
+    position: relative;
+    /* Hide Arrow for IE */
+    > select::-ms-expand {
+        display: none;
     }
-
-    @mixin custom-arrow($size, $color) {
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        width: 0; 
-        height: 0; 
-        border-left: $size solid transparent;
-        border-right: $size solid transparent;
-        border-top: $size solid $color;
+    &:after {
+        @include custom-arrow(5px, #C9C9C9);         
+        content: ' ';
     }
+    > select {
+        height: auto;
 
+        color: #8899AA; 
+
+        text-overflow: ellipsis;
+        text-align: left;
+
+        appearance: none; 
+    }
+}
+
+@mixin custom-arrow($size, $color) {
+    width: 0; 
+    height: 0;
+
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+
+    appearance: none;  
+}
+
+@include breakpoint(desktop) {
     .select-container {
-        position: relative;
-        /* Hide Arrow for IE */
-        select::-ms-expand {
-            display: none;
-        }
-        .select-default {
-            @include hide-default-arrow;
+        @include select;
+        > select {
             padding: 9.5px 14px 8.5px 12px;
-            text-overflow: ellipsis;
-            height: auto;
-            text-align: left;
-            font-size: $fontSize-ExtraSmall;
-            color: #8899AA;              
+
+            font-size: 11px;      
         }
-        
-        .select-arrow {
-            @include custom-arrow(5px, #C9C9C9)
+    }
+}
+
+@include breakpoint(mobile) {
+    .select-container {
+        @include select;
+        > select {
+            padding: 15px 14px 16px 17.5px;
+
+            font-size: 12.77px;     
         }
     }
 }
