@@ -1,16 +1,18 @@
-@media only screen and (min-width: 769px) {
-    .sidebar-container {
+@include breakpoint(desktop) {
+    .navigation-container {
         display: flex;
         flex-direction: column;
+
         width: 250px;
         height: 100%;
+
         background-color: $colorPurple-Light;
         
-        .sidebar-logo-container {
+        >.logo-container {
             padding: 10px 0;
             background-color: $colorPurple-Dark;
 
-            .sidebar-logo {
+            >img {
                 display: block;
                 margin: 0 auto;
                 width: 158px;
@@ -18,36 +20,41 @@
             }
         }
 
-        .sidebar-user {
+        >.user-info {
             padding: 5px 0 5px 21px;
             background-color: #FFFFFF;
-            .user-name {
+            >.info-name {
+                margin-bottom: 2px;
+
+                color: #DF542A;
+
                 font-size: 14px;
                 line-height: 17px;
-                color: #DF542A;
-                margin-bottom: 2px;
             }
-            .user-company {
+            >.info-company {
+                color: #626272;
+
                 font-size: 11px;
                 line-height: 13px;
-                color: #626272;
                 text-transform: uppercase;
             }
         }
         
-        .sidebar-sidemenu-container {
+        >.sidemenu-container {
             flex: 1 auto;
             overflow-y: auto; 
         }
 
-        .sidebar-footer-container {
+        >.footer-container {
             padding-bottom: 22px;
-            text-align: center;
-            letter-spacing: 1px;
-            font-size: 11px;
+            
             color: $colorPink;
 
-            .sidebar-footer-logo {
+            font-size: 11px;
+            text-align: center;
+            letter-spacing: 1px;
+
+            >img {
                 height: 36px;
                 width: 113px;
             }

@@ -6,25 +6,25 @@ import logo from 'statics/icons/logo-white.svg';
 export default class NavigationMobile extends Component {
     render() {
         const { isActive, userName, userCompany, isLogin, initialActive, maskOnClick } = this.props
-        const sidebarClass = isActive ? "sidebar-container active" : "sidebar-container"
+        const navigationClass = isActive ? "navigation-container active" : "navigation-container"
         return [
-            (isActive ? <div className="sidebar-mask" onClick={() => maskOnClick()} /> : null),
-            <div className={sidebarClass}>
-                <div className="sidebar-logo-container">
-                    <img src={logo} className="sidebar-logo" />
+            (isActive ? <div className="page-mask" onClick={() => maskOnClick()} /> : null),
+            <div className={navigationClass}>
+                <div className="logo-container">
+                    <img src={logo} />
                 </div>
-                <div className="sidebar-sidemenu-container">
+                <div className="sidemenu-container">
                     { isLogin && 
-                        <div className="sidebar-user">
-                            <div className="user-name">Hello, {userName}</div>
-                            <div className="user-company">{userCompany}</div>
+                        <div className="user-info">
+                            <div className="info-name">Hello, {userName}</div>
+                            <div className="info-company">{userCompany}</div>
                         </div>
                     }
                     <SideMenu itemActive={initialActive} isLogin={isLogin} />
                 </div>
-                <div className="sidebar-footer-container">
+                <div className="footer-container">
                     <div>POWERED BY</div>
-                    <img src={logo} className="sidebar-footer-logo" />
+                    <img src={logo} />
                 </div>
             </div>
         ]
