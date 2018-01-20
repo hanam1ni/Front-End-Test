@@ -1,9 +1,6 @@
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 769px) {
     @mixin hide-default-arrow {
-        appearance:none;
-        -moz-appearance:none; /* Firefox */
-        -webkit-appearance:none; /* Safari and Chrome */
-        
+        appearance:none;  
     }
 
     @mixin custom-arrow($size, $color) {

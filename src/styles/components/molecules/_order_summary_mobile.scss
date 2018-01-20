@@ -1,7 +1,7 @@
 @media only screen and (max-width: 768px) {
     .order-summary-container {
         display: grid;
-        grid-template-columns: 1fr 120px;
+        grid-template-columns: 1fr 140px;
         grid-row-gap: 10px;
         grid-auto-rows: auto;
         overflow-wrap: break-word;
@@ -38,7 +38,7 @@
         .order-summary-tax {
             display: grid;
             justify-self: end;
-            grid-template-columns: 44px min-content min-content;
+            grid-template-columns: 44px max-content;
             grid-column-gap: 5px;
     
             div {
@@ -64,7 +64,6 @@
             grid-column-end: 3;
             grid-column-gap: 5px;
             grid-template-columns: 100px 1fr;
-            padding-left: 18px;
             padding-right: 12px;
 
             .order-total-header {
