@@ -8,8 +8,8 @@ export default class NavigationMobile extends Component {
         const { isActive, userName, userCompany, isLogin, initialActive, maskOnClick } = this.props
         const navigationClass = isActive ? "navigation-container active" : "navigation-container"
         return [
-            (isActive ? <div className="page-mask" onClick={() => maskOnClick()} /> : null),
-            <div className={navigationClass}>
+            (isActive ? <div className="page-mask" key="pageMask" onClick={() => maskOnClick()} /> : null),
+            <div className={navigationClass} key="navigation" >
                 <div className="logo-container">
                     <img src={logo} />
                 </div>

@@ -20,13 +20,13 @@ export default class EditOrderSubPageMobile extends Component {
                         <div className="select-title">Created By</div>
                         <Select>
                         { mockData.orderHeaderSelect.owner.map((owner) => (
-                            <option value={owner.value}>{owner.title}</option>
+                            <option value={owner.value} key={owner.value}>{owner.title}</option>
                         )) }
                         </Select>
                         <div className="select-title">Status</div>
                         <Select>
                         { mockData.orderHeaderSelect.status.map((status) => (
-                            <option value={status.value}>{status.title}</option>
+                            <option value={status.value} key={status.value}>{status.title}</option>
                         )) }
                         </Select>
                     </div>
