@@ -69,7 +69,6 @@ export default class SideMenu extends Component {
             return (
                 <div className={itemClass} key={title} onClick={() => {this.handleItemClick(itemKey)}}>
                     <div className="item-icon">
-                        <div className="active-tab"></div>
                         <img src={ isActive ? urlActiveIcon : urlIcon } />
                     </div>
                     <div className="item-title">
