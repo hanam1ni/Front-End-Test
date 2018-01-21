@@ -32,6 +32,7 @@
     border-right: $size solid transparent;
     border-top: $size solid $color;
 
+    pointer-events: none;
     appearance: none;  
 }
 
