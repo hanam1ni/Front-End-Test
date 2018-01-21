@@ -6005,7 +6005,7 @@ var SideMenu = function (_Component) {
                         "div",
                         { className: "item-title" },
                         title,
-                        hasChild && _react2.default.createElement("img", { src: isActive ? "/icons/arrow-white.svg" : "/icons/arrow-purple.svg" })
+                        hasChild && _react2.default.createElement("img", { src: isActive ? baseURL + "/icons/arrow-white.svg" : baseURL + "/icons/arrow-purple.svg" })
                     )
                 );
             };
