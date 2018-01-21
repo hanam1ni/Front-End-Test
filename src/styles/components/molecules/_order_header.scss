@@ -1,49 +1,68 @@
-@media only screen and (min-width: 769px) {
+@include breakpoint(desktop) {
     .order-header-container {
         display: flex;
-        background: $colorWhite;
+        align-items: center;
+        
+        padding: 12px 20px 12px 15px;
         border: 1px solid rgba(173,179,185,0.51);
         border-radius: 3px;
         box-shadow: 0 2px 0 0 rgba(0,0,0,0.14);
-        align-items: center;
-        padding: 12px 20px 12px 15px;
 
-        .order-header-detail {
+        background: $colorWhite;
+        
+        >.order-header-detail {
             flex: 1;
-            h2 {
+            >h2 {
                 margin: 0;
-                font-size: $fontSize-Large;
-                color: $colorGrey-Dark;
+                color: $colorGrey;
+                font-size: 16px;
+                
             }
         
-            p {
+            >p {
                 margin: 0;
                 margin-top: 5px;
-                font-size: $fontSize-Small;
-                color: $colorGrey-Light;
+                color: #8899AA;
+                font-size: 12px;
             }
         }
         
-        .order-header-select {
+        >.order-header-select {
             display: flex;
-            flex: 0 0 50%;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: space-between;
-            
-            .header-select {
-                flex: 1 1 85px;
-                @media only screen and (min-width: 769px) {
-                    max-width: 110px;
-                }
-                @media only screen and (max-width: 1040px)  {
-                    max-width: 85px;
-                }
+            flex: 1 0 40%;
+            justify-content: flex-end;
+
+            >.header-select {
+                flex: 0 0 25%;
+               
                 min-width: 85px;
-                text-align: center;
-                font-size: $fontSize-ExtraSmall;
+
                 color: #626272;
+
+                text-align: center;
+                font-size: 11px;
                 line-height: 20px;
+                
+                &:not(:last-child) {
+                    margin-right: 15px;
+                    margin-left: 15px;
+                }
+                
+                &:last-child {
+                    margin-left: 15px;
+                }
+            }
+
+            >.separator {
+               
+                height: 34px;
+                width: 2px;
+
+                border: 1px solid #ADB3B9;
+
+                opacity: 0.2;
+
+                align-self: center;
             }
         }
     }

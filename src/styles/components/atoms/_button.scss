@@ -1,28 +1,38 @@
-@media only screen and (min-width: 769px) {
-    @mixin button($buttonColor, $labelColor) {
-        padding: 13px 20px;
-        font-size: $fontSize-Regular;
-        @include font-weight('regular');
-        line-height: 17px;
-        border-style: none;
-        transition-duration: 0.3s;
-        background-color: $buttonColor;
+@mixin button($buttonColor, $labelColor) {
+    @include font-weight('regular');
+    padding: 13px 20px;
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.08);
+    border-style: none;
+    
+    background-color: $buttonColor;
+    color: $labelColor;
+    
+    font-size: 14px;
+    line-height: 17px;
+    
+    transition-duration: 0.3s;
+
+    &:hover {
+        background-color: darken($buttonColor, 10%);
         color: $labelColor;
-        &:hover {
-            background-color: darken($buttonColor, 10%);
-            color: $labelColor;
-        }
-
-        &:active, &:focus {
-            background-color: lighten($buttonColor, 2%) !important;
-            color: $labelColor;
-        }
     }
 
+    &:active, &:focus {
+        background-color: lighten($buttonColor, 2%) !important;
+        color: $labelColor;
+    }
+}
+
+@include breakpoint(desktop) {
     .button-default {
-        @include button($buttonColor-Default, $buttonLabel-Default);
+        @include button(#8899AA, #FBFBFB);
         border-radius: 5px;
-        box-shadow: 0 2px 0 0 rgba(0,0,0,0.08);
     }
+}
 
+@include breakpoint(mobile) {
+    .button-default {
+        @include button(#8899AA, #FBFBFB);
+        border-radius: 2px;
+    }
 }

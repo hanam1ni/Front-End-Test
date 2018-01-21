@@ -11,7 +11,6 @@ export default class Select extends Component {
                 <FormControl componentClass="select" className="select-default" defaultValue={defaultOption}>
                     {children}
                 </FormControl>
-                <div className="select-arrow"></div>
             </div>
         )
     }
