@@ -1,9 +1,3 @@
-$themeColor-Light: #a1cff5;
-$themeColor-Dark:#333333;
-
-body {
-  background-color: $themeColor-Light;
-  h1 {
-      color: $themeColor-Dark
-  }
-}
+@import 'base/module';
+@import 'components/module';
+@import 'pages/module';

@@ -1,0 +1,28 @@
+.textbox-container {
+    >.textbox-title {
+        margin-bottom: 10px;
+
+        color: #333333;
+
+        font-size: 12px;
+        line-height: 15px;
+        
+    }
+
+    >.textbox-content {
+        padding: 15px 16px 15px 19px;
+        border: 1px solid #D8D8D8;
+        border-radius: 3px;
+
+        background-color: $colorWhite;
+        
+        >p {
+            margin: 0;
+
+            color: #8899AA;
+
+            font-size: 11px;
+            line-height: 17px;
+        }
+    }
+}

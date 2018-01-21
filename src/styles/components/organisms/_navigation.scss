@@ -1,0 +1,63 @@
+@include breakpoint(desktop) {
+    .navigation-container {
+        display: flex;
+        flex-direction: column;
+
+        width: 250px;
+        height: 100%;
+
+        background-color: $colorPurple-Light;
+        
+        >.logo-container {
+            padding: 10px 0;
+            background-color: $colorPurple-Dark;
+
+            >img {
+                display: block;
+                margin: 0 auto;
+                width: 158px;
+                height: 50px;
+            }
+        }
+
+        >.user-info {
+            padding: 5px 0 5px 21px;
+            background-color: #FFFFFF;
+            >.info-name {
+                margin-bottom: 2px;
+
+                color: #DF542A;
+
+                font-size: 14px;
+                line-height: 17px;
+            }
+            >.info-company {
+                color: #626272;
+
+                font-size: 11px;
+                line-height: 13px;
+                text-transform: uppercase;
+            }
+        }
+        
+        >.sidemenu-container {
+            flex: 1 auto;
+            overflow-y: auto; 
+        }
+
+        >.footer-container {
+            padding-bottom: 22px;
+            
+            color: $colorPink;
+
+            font-size: 11px;
+            text-align: center;
+            letter-spacing: 1px;
+
+            >img {
+                height: 36px;
+                width: 113px;
+            }
+        }
+    }
+}

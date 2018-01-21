@@ -1,0 +1,89 @@
+.table-border {
+    .panel-body {
+        padding: 1px;
+        border-radius: 4px;
+    }
+}
+
+.table-responsive {
+    border: none;
+}
+
+.product-table {
+    box-shadow: 1px 1px 0 0 #C9C9C9, 0 2px 0 0 rgba(0,0,0,0.15);
+    margin-bottom: 0;
+    thead {
+        
+        .table-header {
+            height: 50px;
+            border: none;
+            color: #626272;
+            font-size: 8px;
+            vertical-align: middle;
+
+            .table-select {
+                width: 70px;
+                select {
+                    font-size: 8px;
+                    color: #626272;
+                    border: none !important;
+                    background-color: rgba(0,0,0,0);
+                    box-shadow: none;
+                }
+            }
+        }
+
+        th:nth-child(1) {
+            padding-left: 20px;
+        }
+    }
+    
+
+    tbody {  
+        .table-data {
+            border: none;
+            vertical-align: middle;
+            height: 64px;
+            color: #64707C;
+            font-size: 11px;
+
+            a {
+                color: $colorRed;
+            }
+        }
+        
+        a {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .table-data-sku {
+            font-size: 12px;
+        }
+
+        .table-data-qty {
+            .edit-icon {
+                height: 17px;
+                width: 17px;
+            }
+        }
+    
+        .table-data-last {
+            a {
+                color: $colorGrey;
+            }
+        }
+        
+        tr:nth-child(odd) {
+            background-color: $colorWhite;
+        }
+    
+        tr:nth-child(even) {
+            background-color: #F8F8F8;
+        }
+        
+        td:nth-child(1) {
+            padding-left: 20px;
+        }
+    }
+}

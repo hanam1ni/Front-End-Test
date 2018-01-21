@@ -1,0 +1,11 @@
+@include breakpoint(desktop) {
+    .order-page-container {
+        display: flex;
+        height: 100%;
+        background-color: #F4F7F8;
+        
+        .sub-page-container {
+            overflow-y: auto;
+        }
+    }
+}

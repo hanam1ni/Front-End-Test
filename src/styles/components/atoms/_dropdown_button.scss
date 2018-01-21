@@ -1,0 +1,17 @@
+.dropdown {
+    button {
+        border: 1px solid #C9C9C9;
+        border-radius: 4px;
+        position: relative;
+        color: #8899AA;
+        font-size: 11px;
+        padding: 9px 8.5px 8.5px 12.7px;
+        text-align: left;
+
+        span:after {
+            position: absolute;
+            right: 12.7px;
+            top: 50%;
+        }
+    }
+}

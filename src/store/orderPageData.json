@@ -1,0 +1,94 @@
+{
+    "breadcrumbLevel": ["Order", "TN SO 000015"],
+    "orderHeaderDetail": {
+        "name": "CPF Saraburi",
+        "address": "Highway 2, Kaeng Khoi Saraburi Thailand",
+        "tel": "+66 087 348 79 34"
+    },
+    "orderHeaderSelect": {
+        "type": [
+            {
+                "value": "retailers",
+                "title": "Retailers"
+            }
+        ],
+        "owner": [
+            {
+                "value": "tomHank",
+                "title": "Tom Hank"
+            },
+            {
+                "value": "bradPitt",
+                "title": "Brad Pitt"
+            }
+        ],
+        "status": [
+            {
+                "value": "pending",
+                "title": "Pending"
+            }
+        ]
+    },
+    "tableData": [
+        {
+            "sku": "TN SO 000015",
+            "description": "Magnetic contactor - 9A (5.5 kW\\, 7.5 HP)\\, control voltage 230 Vac",
+            "brand": "Schneider Electric",
+            "listPrice": 880,
+            "discount": 30,
+            "netPrice": 660,
+            "qty": 16,
+            "total": 5007988.23
+        },
+        {
+            "sku": "TN SO 000015",
+            "description": "Magnetic contactor - 9A (5.5 kW\\, 7.5 HP)\\, control voltage 230 Vac",
+            "brand": "Schneider Electric",
+            "listPrice": 880,
+            "discount": 30,
+            "netPrice": 660,
+            "qty": 16,
+            "total": 5007988.23
+        },
+        {
+            "sku": "TN SO 000015",
+            "description": "Magnetic contactor - 9A (5.5 kW\\, 7.5 HP)\\, control voltage 230 Vac",
+            "brand": "Schneider Electric",
+            "listPrice": 880,
+            "discount": 30,
+            "netPrice": 660,
+            "qty": 16,
+            "total": 5007988.23
+        },
+        {
+            "sku": "TN SO 000015",
+            "description": "Magnetic contactor - 9A (5.5 kW\\, 7.5 HP)\\, control voltage 230 Vac",
+            "brand": "Schneider Electric",
+            "discount": 30,
+            "qty": 16
+        },
+        {
+            "sku": "TN SO 000015",
+            "description": "Magnetic contactor - 9A (5.5 kW\\, 7.5 HP)\\, control voltage 230 Vac",
+            "brand": "Schneider Electric",
+            "listPrice": 880,
+            "discount": 30,
+            "netPrice": 660,
+            "qty": 16,
+            "total": 5007988.23
+        }
+    ],
+    "remarkContent": "When you enter into any new area of science, you almost always find yourself with a baffling new language of technical terms to learn before you can converse with the experts. This is certainly true in astronomy both in terms of terms that refer to the cosmos and terms that describe the tools of the trade, the most prevalent being the telescope. So to get us off of first base, let’s define some of the key terms that pertain to telescopes to help you be able to talk to them more intelligently.",
+    "summaryData": {
+        "deliveryDate": "14-10-2016",
+        "subTotal": 40033,
+        "shipping": 0,
+        "discount": 9999.999,
+        "tax": {
+            "percent": 7,
+            "value": 1826
+        },
+        "total": 41585.31 
+        }
+}
+

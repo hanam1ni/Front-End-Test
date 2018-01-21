@@ -1,0 +1,38 @@
+@mixin button($buttonColor, $labelColor) {
+    @include font-weight('regular');
+    padding: 13px 20px;
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.08);
+    border-style: none;
+    
+    background-color: $buttonColor;
+    color: $labelColor;
+    
+    font-size: 14px;
+    line-height: 17px;
+    
+    transition-duration: 0.3s;
+
+    &:hover {
+        background-color: darken($buttonColor, 10%);
+        color: $labelColor;
+    }
+
+    &:active, &:focus {
+        background-color: lighten($buttonColor, 2%) !important;
+        color: $labelColor;
+    }
+}
+
+@include breakpoint(desktop) {
+    .button-default {
+        @include button(#8899AA, #FBFBFB);
+        border-radius: 5px;
+    }
+}
+
+@include breakpoint(mobile) {
+    .button-default {
+        @include button(#8899AA, #FBFBFB);
+        border-radius: 2px;
+    }
+}
