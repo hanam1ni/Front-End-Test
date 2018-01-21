@@ -6,23 +6,32 @@
         padding: 100px 70px 310px 35px;
         
         >.page-breadcrumb {
-            margin-bottom: 25px;
+            margin-bottom: 55px;
         }
 
         >.page-header {
             display: flex;
+            flex-wrap: wrap;
+           
             margin-bottom: 15px;
+            margin-top: -30px;
+
+            border: none;
 
             >.page-order-header {
-                flex: 4 auto;
+                flex: 4 0 50%;
             }
 
             >.page-header-button {
-                flex: 1 auto;
+                flex: 1 0;
                 align-self: center;
+                
+                min-width: 250px;
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
+                
+                margin-top: 30px;
                 
                 >.back-link {
                     margin-left: 10px;
