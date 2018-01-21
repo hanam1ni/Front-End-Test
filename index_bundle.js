@@ -5981,14 +5981,15 @@ var SideMenu = function (_Component) {
             }];
 
             var MenuItem = function MenuItem(item, itemKey) {
+                var baseURL = 'Front-End-Test';
                 var isActive = itemKey === _this2.state.itemActive;
                 var itemIcon = item.itemIcon,
                     title = item.title,
                     _item$hasChild = item.hasChild,
                     hasChild = _item$hasChild === undefined ? false : _item$hasChild;
 
-                var urlIcon = "/icons/" + itemIcon + "-purple.svg";
-                var urlActiveIcon = "/icons/" + itemIcon + "-white.svg";
+                var urlIcon = baseURL + "/icons/" + itemIcon + "-purple.svg";
+                var urlActiveIcon = baseURL + "/icons/" + itemIcon + "-white.svg";
                 var itemClass = isActive ? "item-active" : "item";
                 return _react2.default.createElement(
                     "div",
