@@ -5981,7 +5981,7 @@ var SideMenu = function (_Component) {
             }];
 
             var MenuItem = function MenuItem(item, itemKey) {
-                var baseURL = 'Front-End-Test';
+                var baseURL = '/Front-End-Test';
                 var isActive = itemKey === _this2.state.itemActive;
                 var itemIcon = item.itemIcon,
                     title = item.title,
