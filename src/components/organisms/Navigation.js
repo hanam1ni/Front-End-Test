@@ -8,9 +8,7 @@ export default class Navigation extends Component {
         const { isLogin, initialActive, userName, userCompany } = this.props
         return (
             <nav className="navigation-container">
-                <div className="logo-container">
-                    <img src={logo} />
-                </div>
+                <div className="logo-container" />
                 <section className="sidemenu-container">
                     { isLogin && 
                         <div className="user-info">
@@ -22,7 +20,6 @@ export default class Navigation extends Component {
                 </section>
                 <footer className="footer-container">
                     <div>POWERED BY</div>
-                    <img src={logo} />
                 </footer>
             </nav>
         )
