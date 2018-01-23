@@ -5,7 +5,7 @@ export default class OrderSummary extends Component {
     render () {
         const { deliveryDate, subTotal, shipping, discount, tax: { percent:taxPercent, value:taxValue }, total } = this.props.summaryData
         
-        return <div className="order-summary-container">
+        return <section className="order-summary-container">
             <div className="summary-header">
                 Estimated Delivery Date 
             </div>
@@ -51,6 +51,6 @@ export default class OrderSummary extends Component {
                     THB {total.toLocaleString()}
                 </div>
             </div>
-        </div>
+        </section>
     }
 }

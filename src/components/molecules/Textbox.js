@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 export default class Textbox extends Component {
     render() {
         const { title, children } = this.props
-        return <div className="textbox-container">
-            { title && <div className="textbox-title">{title}</div> }
-            <div className="textbox-content">
+        return <article className="textbox-container">
+            { title && <header className="textbox-title">{title}</header> }
+            <article className="textbox-content">
                 <p>{children}</p>
-            </div>
-        </div>
+            </article>
+        </article>
     }
 }
 

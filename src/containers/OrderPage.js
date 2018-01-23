@@ -27,12 +27,12 @@ export default class OrderPage extends Component {
             <div>
                 <Desktop>
                     <div className="order-page-container">
-                        <div className="side-bar-container">
+                        <aside className="side-bar-container">
                             <Navigation initialActive={1} />
-                        </div>
-                        <div className="sub-page-container">
+                        </aside>
+                        <main className="sub-page-container">
                             <EditOrderSubPage />
-                        </div>
+                        </main>
                     </div>
                 </Desktop>
                 <Mobile>
@@ -46,9 +46,9 @@ export default class OrderPage extends Component {
                             userCompany="Twin Types Coporation" 
                         />
                         <MobileTopBar backOnClick={this.handleToggleNav.bind(this)} title="Edit ORD07070707"/>
-                        <div className="sub-page-container">
+                        <main className="sub-page-container">
                             <EditOrderSubPageMobile />
-                        </div>
+                        </main>
                     </div>
                 </Mobile>
             </div>

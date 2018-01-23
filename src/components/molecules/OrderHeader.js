@@ -6,7 +6,7 @@ export default class OrderHeader extends Component {
     render() {
         const { detail, selection } = this.props
         return (
-            <div className="order-header-container">
+            <section className="order-header-container">
                 <div className="order-header-detail">
                     <h2>{detail.name}</h2>
                     <p>{detail.address}</p>
@@ -34,7 +34,7 @@ export default class OrderHeader extends Component {
                         </Select>
                     </div>
                 </div>
-            </div>
+            </section>
         )
     }
 }

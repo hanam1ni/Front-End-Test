@@ -7,24 +7,24 @@ export default class Navigation extends Component {
     render() {
         const { isLogin, initialActive, userName, userCompany } = this.props
         return (
-            <div className="navigation-container">
+            <nav className="navigation-container">
                 <div className="logo-container">
                     <img src={logo} />
                 </div>
-                { isLogin && 
-                    <div className="user-info">
-                        <div className="info-name">Hello, {userName}</div>
-                        <div className="info-company">{userCompany}</div>
-                    </div>
-                }
-                <div className="sidemenu-container">
+                <section className="sidemenu-container">
+                    { isLogin && 
+                        <div className="user-info">
+                            <div className="info-name">Hello, {userName}</div>
+                            <div className="info-company">{userCompany}</div>
+                        </div>
+                    }
                     <SideMenu itemActive={initialActive} isLogin={isLogin} />
-                </div>
-                <div className="footer-container">
+                </section>
+                <footer className="footer-container">
                     <div>POWERED BY</div>
                     <img src={logo} />
-                </div>
-            </div>
+                </footer>
+            </nav>
         )
     }
 }
