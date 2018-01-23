@@ -19,30 +19,30 @@
                 height: 50px;
             }
         }
-
-        >.user-info {
-            padding: 5px 0 5px 21px;
-            background-color: #FFFFFF;
-            >.info-name {
-                margin-bottom: 2px;
-
-                color: #DF542A;
-
-                font-size: 14px;
-                line-height: 17px;
-            }
-            >.info-company {
-                color: #626272;
-
-                font-size: 11px;
-                line-height: 13px;
-                text-transform: uppercase;
-            }
-        }
         
         >.sidemenu-container {
             flex: 1 auto;
             overflow-y: auto; 
+
+            >.user-info {
+                padding: 5px 0 5px 21px;
+                background-color: #FFFFFF;
+                >.info-name {
+                    margin-bottom: 2px;
+    
+                    color: #DF542A;
+    
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+                >.info-company {
+                    color: #626272;
+    
+                    font-size: 11px;
+                    line-height: 13px;
+                    text-transform: uppercase;
+                }
+            }
         }
 
         >.footer-container {

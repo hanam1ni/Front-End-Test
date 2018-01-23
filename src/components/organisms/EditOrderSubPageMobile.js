@@ -9,13 +9,13 @@ import logo from 'statics/icons/logo-white.svg';
 export default class EditOrderSubPageMobile extends Component {
     render() {
         return (
-            <div className="edit-order-page-container">
-                <div className="page-header">
-                    <div className="header-detail">
+            <section className="edit-order-page-container">
+                <header className="page-header">
+                    <section className="header-detail">
                         <h1>{mockData.orderHeaderDetail.name}</h1>
                         <span>{mockData.orderHeaderDetail.address}</span>
-                    </div>
-                    <div className="header-select">
+                    </section>
+                    <section className="header-select">
                         <Button>Update Order</Button>
                         <div className="select-title">Created By</div>
                         <Select>
@@ -29,28 +29,28 @@ export default class EditOrderSubPageMobile extends Component {
                             <option value={status.value} key={status.value}>{status.title}</option>
                         )) }
                         </Select>
-                    </div>
-                </div>
+                    </section>
+                </header>
                 <div className="separator" />
-                <div className="page-summary">
+                <section className="page-summary">
                     <OrderSummary summaryData={mockData.summaryData} />
-                </div>
+                </section>
                 <div className="separator" />
-                <div className="page-add-product">
+                <section className="page-add-product">
                     <AddProductInput placeholder="Add Products" stretch />
-                </div>
-                <div className="page-remark">
+                </section>
+                <section className="page-remark">
                     <span>Remark</span>
                     <p>{ mockData.remarkContent }</p>
-                </div>
-                <div className="page-table">
+                </section>
+                <section className="page-table">
                     <ProductTable tableData={mockData.tableData} />
-                </div>
-                <div className="footer-container">
+                </section>
+                <footer className="footer-container">
                     <div>POWERED BY</div>
                     <img src={logo} />
-                </div>
-            </div>
+                </footer>
+            </section>
         )
     }
 }

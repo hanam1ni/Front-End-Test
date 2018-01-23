@@ -1,0 +1,14 @@
+.order-page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #F4F7F8;
+
+    .sub-page-container {
+        overflow-y: auto;
+    }
+
+    @include breakpoint(desktop) {
+        flex-direction: row;
+    }
+}

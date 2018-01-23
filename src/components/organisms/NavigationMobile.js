@@ -9,11 +9,11 @@ export default class NavigationMobile extends Component {
         const navigationClass = isActive ? "navigation-container active" : "navigation-container"
         return [
             (isActive ? <div className="page-mask" key="pageMask" onClick={() => maskOnClick()} /> : null),
-            <div className={navigationClass} key="navigation" >
+            <nav className={navigationClass} key="navigation" >
                 <div className="logo-container">
                     <img src={logo} />
                 </div>
-                <div className="sidemenu-container">
+                <section className="sidemenu-container">
                     { isLogin && 
                         <div className="user-info">
                             <div className="info-name">Hello, {userName}</div>
@@ -21,12 +21,12 @@ export default class NavigationMobile extends Component {
                         </div>
                     }
                     <SideMenu itemActive={initialActive} isLogin={isLogin} />
-                </div>
-                <div className="footer-container">
+                </section>
+                <footer className="footer-container">
                     <div>POWERED BY</div>
                     <img src={logo} />
-                </div>
-            </div>
+                </footer>
+            </nav>
         ]
     }
 }

@@ -23,16 +23,12 @@
     }
 }
 
-@include breakpoint(desktop) {
-    .button-default {
+.button-default {
+    @include button(#8899AA, #FBFBFB);
+    border-radius: 2px;
+
+    @include breakpoint(desktop) {
         @include button(#8899AA, #FBFBFB);
         border-radius: 5px;
-    }
-}
-
-@include breakpoint(mobile) {
-    .button-default {
-        @include button(#8899AA, #FBFBFB);
-        border-radius: 2px;
     }
 }
