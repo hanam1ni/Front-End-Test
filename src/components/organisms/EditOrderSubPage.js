@@ -25,7 +25,7 @@ const EditOrderSubPage = (props) => (
             </section>
         </header>
         <section className="page-add-product">
-            <AddProductInput stretch placeholder="Add Products" />
+            <AddProductInput stretch placeholder="Add Products" productData={mockData.tableData} />
         </section>
         <section className="page-table">
             <ProductTable tableData={mockData.tableData} />

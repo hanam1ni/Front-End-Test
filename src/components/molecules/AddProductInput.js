@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import MediaQuery from 'react-responsive'
 import PropTypes from 'prop-types'; 
-import Svg from "react-inlinesvg";
-import { InputGroup, FormControl } from 'react-bootstrap';
-import addIcon from 'statics/icons/icon_plus.svg'
 import classNames from 'classnames';
-import { debounce } from 'lodash';
+import Svg from 'react-inlinesvg';
+import { isNil, debounce } from 'lodash'
+import { InputGroup, FormControl, Table, Panel } from 'react-bootstrap';
+import Button from 'atoms/Button'
+import Input from 'atoms/Input'
+import addIcon from 'statics/icons/icon_plus.svg'
 
 export default class AddProductInput extends Component {
     constructor(props) {
@@ -27,29 +30,55 @@ export default class AddProductInput extends Component {
         this.handleOnChangeTimeout()
     }
 
-    handleToggleFocus() {
+    handleOnFocus() {
         this.setState({
-            formFocus: !(this.state.formFocus)
+            formFocus: true
+        })
+    }
+
+    handleOffFocus() {
+        this.setState({
+            formFocus: false
         })
     }
 
     render () {
         const { formFocus, formOnChange } = this.state
-        const { stretch, placeholder } = this.props
-        const InputGroupClass = classNames("add-product-input", {"stretch":stretch})
+        const { stretch, placeholder, productData } = this.props
+        const InputGroupClass = classNames("add-product-input", { "stretch":stretch })
+        const Desktop = (props) => (<MediaQuery  {...props} minDeviceWidth={769} />)
+        const ProductTable = (productData) => [
+            <div className="page-mask" onClick={() => this.handleOffFocus()}/>,
+            <Panel className="table-border">
+                <Table condensed className="product-table" >
+                    <tbody>
+                    {productData.map((product) => (
+                        <tr>
+                            <td className="table-data">{product.sku}</td>
+                            <td className="table-data">{product.description}</td>
+                            <td className="table-data">{product.brand}</td>
+                            {isNil(product.listPrice) ? <td className="table-data"><a>Set Price</a></td> : <td className="table-data">THB {product.listPrice.toLocaleString()}</td>}
+                            <td className="table-data table-button"><Input styleclass="qty-input" defaultValue={1}/><Button styleclass="add-button">Add</Button></td>
+                        </tr>
+                    )) }
+                    </tbody>
+                </Table> 
+            </Panel>
+        ]
+        
         return (
             <InputGroup className={InputGroupClass}>
                 { formOnChange ? 
                     <div className="loader" /> :
-                    <Svg src={addIcon} className={formFocus ? "active" : " "} />
+                    <Svg src={addIcon} className={classNames({ "active":formFocus })} />
                 }
                 <FormControl 
                     type="text"
                     placeholder={placeholder} 
                     onChange={() => this.handleOnChange()}
-                    onFocus={() => this.handleToggleFocus()}
-                    onBlur={() => this.handleToggleFocus()}
+                    onFocus={() => this.handleOnFocus()}
                 />
+                <Desktop>{ formFocus && ProductTable(productData) }</Desktop>
             </InputGroup>
         )
     }
