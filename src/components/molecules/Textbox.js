@@ -1,17 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types'; 
 
-export default class Textbox extends Component {
-    render() {
-        const { title, children } = this.props
-        return <div className="textbox-container">
-            { title && <div className="textbox-title">{title}</div> }
-            <div className="textbox-content">
-                <p>{children}</p>
-            </div>
-        </div>
-    }
-}
+const Textbox = ({ title, children }) => (
+    <article className="textbox-container">
+        { title && <header className="textbox-title">{title}</header> }
+        <article className="textbox-content">
+            <p>{children}</p>
+        </article>
+    </article>
+)
 
 Textbox.propTypes = {
     title: PropTypes.string,
@@ -22,3 +19,5 @@ Textbox.defaultProps = {
     title: null,
     children: null
 }
+
+export default Textbox

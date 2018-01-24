@@ -21,13 +21,12 @@
 
 .order-summary-container {
     display: flex;
+    width: 100%;
+
     @include breakpoint(desktop) {
         width: 300px;
     }
-    
-    @include breakpoint(mobile) {
-        width: 100%;
-    }
+
     flex-wrap: wrap;
     overflow-wrap: break-word;
     overflow-x: auto; 
@@ -38,43 +37,37 @@
 
     box-shadow: 0 2px 14px 0 rgba(0,0,0,0.12);
     
-    .line-separator {
-        width: 100%;
-        height: 2px;
-
-        border: 1px solid #F1F0F4;
-        border-top: none;
+    >section {
+        display: flex;
+        width: 100%;    
     }
 
-    >.summary-header {
+    .summary-header {
        @include summary-header();
     }
 
-    >.summary-data {
+    .summary-data {
         @include summary-data();
     }
     
-    >.summary-sub-total {
+    .sub-total-data {
         @include summary-data();
         font-size: 12px;
     }
 
-    >.summary-tax {
-        display: flex;
-        flex: 0 35%;
-        
-        >.summary-tax-percent{
+    .summary-tax {
+        .summary-tax-percent{
             @include summary-data();
             width: 28px;
         }
-        >.summary-tax-value{
+        .summary-tax-value{
             @include summary-data();
-            flex: 1 auto;
+            flex: 0 auto;
             padding-left: 5px;
         }
     } 
 
-    >.summary-total {
+    .summary-total {
         display: flex;
         width: 100%;
 
@@ -92,5 +85,13 @@
             font-size: 18px;
             white-space: nowrap;
         }
+    }
+
+    >.line-separator {
+        width: 100%;
+        height: 2px;
+
+        border: 1px solid #F1F0F4;
+        border-top: none;
     }
 }

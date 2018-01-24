@@ -1,0 +1,133 @@
+@keyframes loading {
+    0%   {
+        transform: translateY(-50%) scale(0.6);
+        opacity: 1;
+    }
+    100% {
+      transform: translateY(-50%) scale(1);
+      opacity: 0;
+    }
+}
+
+@mixin input-icon-style($size) {
+    height: $size;
+    width: $size;
+
+    position: absolute;
+    top: 50%;
+    left: 10px;
+
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+@mixin add-icon($size) {
+    >span {
+        >svg {
+            @include input-icon-style($size);
+        }
+        &.active {
+            >svg {
+                transform: translateY(-50%) rotate(45deg);
+            }
+        }
+    }
+}
+
+@mixin loader($size) {
+    >.loader {
+        @include input-icon-style($size);
+        border-style: solid;
+        border-color: grey;
+        border-width: 2px;
+        border-radius: 50%;
+
+        animation: loading 0.8s infinite;
+    }
+}
+
+.add-product-input {
+    @include add-icon(32px);
+    @include loader(32px);
+    >input {
+        height: auto;
+        padding: 23px 0 25px 57px;
+
+        color: #8899AA;
+
+        border: 1px solid #C3C8CD !important;
+        border-left: none !important;
+        border-right: none !important;
+        box-shadow: 0 -1px 3px 0 rgba(0,0,0,0.11), 0 2px 3px 0 rgba(98,98,114,0.21);
+
+        font-size: 18px;
+        line-height: 21px;
+        text-align: left;
+    }
+
+    &.stretch {
+        width: 100%;
+    }
+
+    @include breakpoint(desktop) {
+        @include add-icon(20px);
+        @include loader(20px);
+
+        >input {
+            padding: 17px 0 18px 45px;
+
+            border: 1px solid #C3C8CD !important;
+            border-radius: 3px !important;            
+            box-shadow: none;
+
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        .table-border {
+            width: 100%;
+
+            position: absolute;
+            top: 50px;
+            z-index: 2;            
+        }
+
+        .page-mask {
+            height: 100%;
+            width: 100%;
+    
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            
+            background-color: rgba(51,51,51,0.5);
+        }
+
+        table {
+            box-shadow: none;
+
+            .table-button {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+
+            .input-group {
+                width: 34px;
+            }
+            
+            .add-button {
+                width: 50px;
+                height: 30px;
+                box-sizing: border-box;
+                
+                padding: 8px 12px 8px 14px;
+                margin-left: 10px;
+                margin-right: 10px;
+
+                font-size: 11px;
+            }
+        }
+    }
+}
