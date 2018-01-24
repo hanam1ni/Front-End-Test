@@ -1,11 +1,12 @@
 import React from 'react'
+import Svg from "react-inlinesvg";
 import PropTypes from 'prop-types'; 
 
 const MobileTopBar = ({ title, backOnClick }) => (
     <header className="mobile-top-bar-container">
-        <a onClick={() => backOnClick()}><img src="icons/arrow-orange.svg" className="back-icon"/></a>
+        <a onClick={() => backOnClick()}><Svg src="icons/arrow-orange.svg" className="back-icon"/></a>
         {title}
-        <a><img src="icons/magnifying-glass.svg" className="magnify-icon"/></a>
+        <a><Svg src="icons/magnifying-glass.svg" className="magnify-icon"/></a>
     </header>
 )
 

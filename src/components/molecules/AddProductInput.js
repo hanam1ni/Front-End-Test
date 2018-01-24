@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'; 
+import Svg from "react-inlinesvg";
 import { InputGroup, FormControl } from 'react-bootstrap';
 import addIcon from 'statics/icons/icon_plus.svg'
 import classNames from 'classnames';
@@ -40,7 +41,7 @@ export default class AddProductInput extends Component {
             <InputGroup className={InputGroupClass}>
                 { formOnChange ? 
                     <div className="loader" /> :
-                    <img role="img" src={addIcon} className={formFocus ? "active" : " "} />
+                    <Svg src={addIcon} className={formFocus ? "active" : " "} />
                 }
                 <FormControl 
                     type="text"

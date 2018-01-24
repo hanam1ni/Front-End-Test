@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Svg from "react-inlinesvg";
 import classNames from 'classnames';
 
 export default class SideMenu extends Component {
@@ -70,11 +71,11 @@ export default class SideMenu extends Component {
             return (
                 <ul className={itemClass} key={title} onClick={() => {this.handleItemClick(itemKey)}}>
                     <div className="item-icon">
-                        <img src={ isActive ? urlActiveIcon : urlIcon } />
+                        <Svg src={ isActive ? urlActiveIcon : urlIcon } />
                     </div>
                     <div className="item-title">
                         { title }
-                        { hasChild &&  <img src={ isActive ? "/icons/arrow-white.svg" : "/icons/arrow-purple.svg" } /> }
+                        { hasChild &&  <Svg src={ isActive ? "/icons/arrow-white.svg" : "/icons/arrow-purple.svg" } /> }
                     </div>
                 </ul>
             )

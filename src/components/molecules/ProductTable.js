@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'; 
+import Svg from "react-inlinesvg";
 import { isNil } from 'lodash'
 import { Table, Panel } from 'react-bootstrap'
 import Select from 'atoms/Select.js'
@@ -51,7 +52,7 @@ const ProductTable = ({ tableData }) => {
             isNil(netPrice) ? dataRow.push(<td className="table-data table-data-netPrice" key={`netPrice${index}`} ><a>Set Price</a></td>)
             : dataRow.push(<td className="table-data table-data-netPrice" key={`${netPrice}${index}`} >THB {netPrice.toLocaleString()}</td>)
             // Quantity Cell
-            dataRow.push(<td className="table-data table-data-qty" key={`${qty}${index}`} >{qty} <a><img src="icons/icon_edit.svg" className="edit-icon"/></a></td>)
+            dataRow.push(<td className="table-data table-data-qty" key={`${qty}${index}`} >{qty} <a><Svg src="icons/icon_edit.svg" className="edit-icon"/></a></td>)
             // Total Cell
             isNil(total) ? dataRow.push(<td className="table-data table-data-total" key={`total${index}`} ><a>Set Price</a></td>)
             : dataRow.push(<td className="table-data table-data-total" key={`${total}${index}`} >THB {total.toLocaleString()}</td>)
