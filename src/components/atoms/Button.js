@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types'; 
+import classNames from 'classnames';
 import { Button as DefaultButton } from 'react-bootstrap'
 
-export default class Button extends Component {
-    render() {
-        const { styleclass, children } = this.props
-        const buttonClass = `button-default ${styleclass}`
-        return <DefaultButton className={buttonClass} {...this.props}>{children}</DefaultButton>
-    }
+const Button = (props) => {
+    const { styleclass, children } = props
+    const buttonClass = classNames('button-default', styleclass)
+    return <DefaultButton className={buttonClass} {...props}>{children}</DefaultButton>
 }
 
 Button.propTypes = {
@@ -17,3 +16,5 @@ Button.propTypes = {
 Button.defaultProps = {
     children: null
 }
+
+export default Button

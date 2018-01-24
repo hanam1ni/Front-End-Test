@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'; 
+import Svg from "react-inlinesvg";
 import { InputGroup, FormControl } from 'react-bootstrap';
 import addIcon from 'statics/icons/icon_plus.svg'
+import classNames from 'classnames';
 import { debounce } from 'lodash';
 
 export default class AddProductInput extends Component {
@@ -34,15 +36,12 @@ export default class AddProductInput extends Component {
     render () {
         const { formFocus, formOnChange } = this.state
         const { stretch, placeholder } = this.props
-        const InputGroupClass = [
-            "add-product-input",
-            stretch ? "stretch" : null
-        ].join(' ')
+        const InputGroupClass = classNames("add-product-input", {"stretch":stretch})
         return (
             <InputGroup className={InputGroupClass}>
                 { formOnChange ? 
-                    <div class="loader" /> :
-                    <img role="img" src={addIcon} className={formFocus ? "active" : " "} />
+                    <div className="loader" /> :
+                    <Svg src={addIcon} className={formFocus ? "active" : " "} />
                 }
                 <FormControl 
                     type="text"

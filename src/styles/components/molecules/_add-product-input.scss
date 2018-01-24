@@ -22,10 +22,14 @@
 }
 
 @mixin add-icon($size) {
-    >img {
-        @include input-icon-style($size);
+    >span {
+        >svg {
+            @include input-icon-style($size);
+        }
         &.active {
-            transform: translateY(-50%) rotate(45deg);
+            >svg {
+                transform: translateY(-50%) rotate(45deg);
+            }
         }
     }
 }
