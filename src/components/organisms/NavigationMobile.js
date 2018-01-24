@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import SideMenu from 'molecules/SideMenu.js';
 import PropTypes from 'prop-types'; 
+import classNames from 'classnames';
 import logo from 'statics/icons/logo-white.svg';
 
 const NavigationMobile = ({ isActive, userName, userCompany, isLogin, initialActive, maskOnClick }) => {
-    const navigationClass = isActive ? "navigation-container active" : "navigation-container"
+    const navigationClass = classNames("navigation-container", { "active":isActive })
     return [
         (isActive ? <div className="page-mask" key="pageMask" onClick={() => maskOnClick()} /> : null),
         <nav className={navigationClass} key="navigation" >
-            <div className="logo-container">
-                <img src={logo} />
-            </div>
+            <div className="logo-container" />
             <section className="sidemenu-container">
                 { isLogin && 
                     <div className="user-info">
@@ -22,7 +21,6 @@ const NavigationMobile = ({ isActive, userName, userCompany, isLogin, initialAct
             </section>
             <footer className="footer-container">
                 <div>POWERED BY</div>
-                <img src={logo} />
             </footer>
         </nav>
     ]

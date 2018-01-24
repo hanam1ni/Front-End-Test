@@ -47,7 +47,6 @@ const EditOrderSubPageMobile = () => (
         </section>
         <footer className="footer-container">
             <div>POWERED BY</div>
-            <img src={logo} />
         </footer>
     </section>
 )

@@ -5,9 +5,7 @@ import logo from 'statics/icons/logo-white.svg';
 
 const Navigation = ({ isLogin, initialActive, userName, userCompany }) => (
     <nav className="navigation-container">
-        <div className="logo-container">
-            <img src={logo} />
-        </div>
+        <div className="logo-container" />
         <section className="sidemenu-container">
             { isLogin && 
                 <div className="user-info">
@@ -19,7 +17,6 @@ const Navigation = ({ isLogin, initialActive, userName, userCompany }) => (
         </section>
         <footer className="footer-container">
             <div>POWERED BY</div>
-            <img src={logo} />
         </footer>
     </nav>
 )
