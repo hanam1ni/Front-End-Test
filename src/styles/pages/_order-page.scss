@@ -10,5 +10,9 @@
 
     @include breakpoint(desktop) {
         flex-direction: row;
+
+        >.side-bar-container {
+            z-index: 2;
+        }
     }
 }

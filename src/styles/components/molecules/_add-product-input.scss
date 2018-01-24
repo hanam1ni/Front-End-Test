@@ -83,5 +83,52 @@
             font-size: 12px;
             line-height: 15px;
         }
+
+        .table-border {
+            width: 100%;
+
+            position: absolute;
+            top: 50px;
+            z-index: 2;            
+        }
+
+        .page-mask {
+            height: 100%;
+            width: 100%;
+    
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            
+            pointer-events: none;
+            background-color: rgba(51,51,51,0.5);
+        }
+
+        table {
+            box-shadow: none;
+
+            .table-button {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+
+            .input-group {
+                width: 34px;
+            }
+            
+            .add-button {
+                width: 50px;
+                height: 30px;
+                box-sizing: border-box;
+                
+                padding: 8px 12px 8px 14px;
+                margin-left: 10px;
+                margin-right: 10px;
+
+                font-size: 11px;
+            }
+        }
     }
 }
