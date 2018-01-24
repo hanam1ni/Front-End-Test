@@ -30,9 +30,15 @@ export default class AddProductInput extends Component {
         this.handleOnChangeTimeout()
     }
 
-    handleToggleFocus() {
+    handleOnFocus() {
         this.setState({
-            formFocus: !(this.state.formFocus)
+            formFocus: true
+        })
+    }
+
+    handleOffFocus() {
+        this.setState({
+            formFocus: false
         })
     }
 
@@ -42,7 +48,7 @@ export default class AddProductInput extends Component {
         const InputGroupClass = classNames("add-product-input", { "stretch":stretch })
         const Desktop = (props) => (<MediaQuery  {...props} minDeviceWidth={769} />)
         const ProductTable = (productData) => [
-            <div className="page-mask" />,
+            <div className="page-mask" onClick={() => this.handleOffFocus()}/>,
             <Panel className="table-border">
                 <Table condensed className="product-table" >
                     <tbody>
@@ -70,8 +76,7 @@ export default class AddProductInput extends Component {
                     type="text"
                     placeholder={placeholder} 
                     onChange={() => this.handleOnChange()}
-                    onFocus={() => this.handleToggleFocus()}
-                    onBlur={() => this.handleToggleFocus()}
+                    onFocus={() => this.handleOnFocus()}
                 />
                 <Desktop>{ formFocus && ProductTable(productData) }</Desktop>
             </InputGroup>
