@@ -81,7 +81,7 @@
             @include side-menu-item(false);
     }
 
-    >.item-active {
+    >.item.active {
             @include side-menu-item(true);
     }
 }
